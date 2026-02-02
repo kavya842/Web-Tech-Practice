@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            height: 60px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        a{
+            color: beige;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        [id]{
+            color: red;
+        }
+        nav div>[target="_blank"]{
+            color: yellowgreen;
+        }
+        nav div>[target="_self"]{
+            color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="" id="home">HOME</a>
+        </div>
+        <div>
+            <a href="" target="_blank"> ABOUT</a>
+        </div>
+        <div>
+            <a href="" id="contact">CONTACT</a>
+        </div>
+        <div>
+            <a href="" target="_blank">LOGIN</a>
+        </div>
+        <DIV>
+            <a href="" target="_self">REGISTER</a>
+        </DIV>
+    </nav>
+</body>
+</html>

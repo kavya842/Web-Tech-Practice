@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Information</legend>
+            <label for="user">Username : </label>
+            <input  id="user"  placeholder="Enter Name" type="text" name="Username"><br><br>
+            <label for="">Email :</label>
+            <input type="email" placeholder="Enter Mail Id"><br><br>
+            <label for="">Password :</label>
+            <input type="password"  pattern=[A-Za-z0-9@]{4,8} placeholder="Enter Password"><br><br>
+            <label for="">Gender:</label>
+            <input type="radio" name="gender" value="male"> <label for="">Male</label>
+            <input type="radio" name="gender" value="female"><label for="">Female</label>
+            <input type ="radio" name="gender" value="others"><label for="">Others</label><br><br>
+            <label for="">Skills:</label>
+            <input type="checkbox" name="skill" value="html"><label for="">html</label>
+            <input type="checkbox" name="skill" value="css"><label for="">css</label>
+            <input type="checkbox" name="skill" value="javascript"><label for="">javascript</label><br><br>
+            <label for="">Qualification</label>
+            <select name="" id="">
+                <optgroup label="B.Tech"></optgroup>
+                <option value=""> Select</option>
+                <option value=""> COMPUTER SCIENCE</option>
+                 <option value=""> INFORMATION TECHNOLOGY</option>
+                  <option value=""> ARTIFICIAL INTELLIGANCE</option>
+                   <option value=""> ECE</option>
+                    <option value="">ML</option>
+                     <option value="">EEE</option>
+                      <option value="">CIVIL</option></optgroup>
+                      <optgroup label="B.sc"></optgroup>
+                <option value="">SCIENCE</option>
+                 <option value="">physics</option>
+                  <option value=""> ARTs</option>
+                   <option value="">maths</option>
+                    <option value="">computers</option>
+                   </optgroup>
+                  </select><br><br>
+                <label for="">DOJ:</label>
+                <input type="date" min=2026-01-05" max="2026-01-15"></label><br><br>
+                <label for="">Resume:</label>
+                <input type="file"><br><br>
+                <label for="">Address:</label>
+                <textarea name="Address"  minlength="5" maxlength="15"></textarea><br><br>
+                <label for="">Experiance</label>
+                <input name="exp" min="10" max="30" step="5" type="range"><br><br>
+                <label for="">Course</label>
+                <input type="text" list="Course">
+                <datalist id="Course">
+                    <option value="pfs">pythonfullstack</option>
+                    <option value="jfs">javafullstack</option>
+                </datalist><br><br>
+            <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>
