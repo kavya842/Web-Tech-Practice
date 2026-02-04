@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Myntra</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+nav{
+    height:70px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    padding:0 100px;
+    border-bottom:1.5px solid #ddd;
+}
+#logo img{
+    height:45px;
+}
+.menu-search{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin-left:80px;
+    position:relative; 
+    flex:1.5;
+}
+.nav-item{
+    position:relative;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    padding:25px 5px;
+}
+.nav-item::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:3px;
+    background:#ff3f6c;
+    transition:0.3s;
+}
+
+.nav-item:hover::after{
+    width:100%;
+}
+.search-box input{
+    width:340px;
+    padding:10px 14px;
+    border-radius:4px;
+    border:1px solid #ccc;
+    background:#f5f5f6;
+    font-size:14px;
+    outline:none;
+}
+
+.search-box input:focus{
+    background:#fff;
+    border-color:black;
+}
+.mega-menu{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:60vw;                
+    display:none;
+    padding:30px 30px;
+    box-shadow:0 6px 14px rgba(0,0,0,0.15);
+    z-index:100;
+}
+.nav-item:hover .mega-menu{
+    display:flex;
+}
+.column{
+    width:25%;
+    padding:20px;
+    border-bottom:1.5px solid #ddd;
+}
+.column:nth-child(odd){
+    background:#ffffff;
+}
+
+.column:nth-child(even){
+    background:#f5f5f5;
+}
+
+.column h4{
+    color:#ff3f6c;
+    font-size:14px;
+    margin-bottom:10px;
+    /* border-bottom:1.5px solid #ddd; */
+}
+
+.column ul{
+    list-style:none;
+    border-bottom:1.5px solid #ddd;
+}
+
+.column ul li{
+    font-size:13px;
+    padding:4px 0;
+    color:#333;
+    cursor:pointer;
+    /* border-bottom:1.5px solid #ddd; */
+}
+
+.column ul li:hover{
+    text-decoration:underline;
+}
+.icons{
+    display:flex;
+    gap:20px;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div id="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png">
+    </div>
+    <div class="menu-search">
+        <div class="nav-item">
+            MEN
+
+            <div class="mega-menu">
+                   <div class="column">
+                    <h4>Topwear</h4>
+                    <ul>
+                        <li>T-Shirts</li>
+                        <li>Casual Shirts</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweatshirts</li>
+                        <li>Jackets</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                    </ul>
+
+                    <h4 style="margin-top:15px;">Indian & Festive Wear</h4>
+                    <ul>
+                        <li>Kurtas & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h4>Bottomwear</h4>
+                    <ul>
+                        <li>Jeans</li>
+                        <li>Casual Trousers</li>
+                        <li>Formal Trousers</li>
+                        <li>Track Pants & Joggers</li>
+                        <li>Shorts</li>
+                    </ul>
+
+                    <h4 style="margin-top:15px;">Innerwear & Sleepwear</h4>
+                    <ul>
+                        <li>Briefs & Trunks</li>
+                        <li>Boxers</li>
+                        <li>Vests</li>
+                        <li>Sleepwear & Loungewear</li>
+                        <li>Thermals</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h4>Footwear</h4>
+                    <ul>
+                        <li>Casual Shoes</li>
+                        <li>Sports Shoes</li>
+                        <li>Formal Shoes</li>
+                        <li>Sneakers</li>
+                        <li>Sandals & Floaters</li>
+                        <li>Flip Flops</li>
+                        <li>Socks</li>
+                    </ul>
+
+                    <h4 style="margin-top:15px;">Watches</h4>
+                </div>
+
+                <div class="column">
+                    <h4>Sports & Active Wear</h4>
+                    <ul>
+                        <li>Sports Shoes</li>
+                        <li>Active T-Shirts</li>
+                        <li>Track Pants & Shorts</li>
+                        <li>Tracksuits</li>
+                        <li>Jackets & Sweatshirts</li>
+                        <li>Swimwear</li>
+                    </ul>
+
+                    <h4 style="margin-top:15px;">Gadgets</h4>
+                    <ul>
+                        <li>Smart Wearables</li>
+                        <li>Fitness Gadgets</li>
+                        <li>Headphones</li>
+                        <li>Speakers</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h4>Fashion Accessories</h4>
+                    <ul>
+                        <li>Wallets</li>
+                        <li>Belts</li>
+                        <li>Perfumes & Body Mists</li>
+                        <li>Trimmers</li>
+                        <li>Caps & Hats</li>
+                        <li>Phone Cases</li>
+                        <li>Rings & Wristwear</li>
+                        <li>Helmets</li>
+                    </ul>
+
+                    <h4 style="margin-top:15px;">Bags & Backpacks</h4>
+                    <h4>Luggages & Trolleys</h4>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="nav-item">WOMEN</div>
+        <div class="nav-item">KIDS</div>
+        <div class="nav-item">HOME</div>
+        <div class="nav-item">BEAUTY</div>
+        <div class="nav-item">GENZ</div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for products, brands and more">
+        </div>
+    </div>
+    <div class="icons">
+        <span>🛒</span>
+        <span>👤</span>
+    </div>
+
+</nav>
+
+</body>
+</html>
+
