@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        #container{
+            height:600px;
+            width:800px;
+            border: 2px solid red;
+            margin: 100px auto;
+            position: relative;
+        }
+        img{
+            height: 400px;
+            width: 400px;
+            position: absolute;
+        }
+        #img1{
+            top:40px;
+            left:60px;
+        }
+        #img2{
+            top:80px;
+            left:100px;
+        }
+        #img3{
+            top:120px;
+            left:140px;
+        }
+   img:hover{
+    z-index:2;
+   }
+    </style>
+</head>
+<body>
+   <div id="container">
+        <img src="../assests/google.png" alt="" id="img1">
+        <img src="../assests/images (1).jpeg" alt="" id="img2">
+        <img src="../assests/img.jpeg" alt="" id="img3">
+    </div>
+</body>
+</html>

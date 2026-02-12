@@ -2,254 +2,417 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Myntra</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Myntra - Fashion for Everyone</title>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-nav{
-    height:70px;
-    background:#fff;
-    display:flex;
-    align-items:center;
-    padding:0 100px;
-    border-bottom:1.5px solid #ddd;
-}
-#logo img{
-    height:45px;
-}
-.menu-search{
-    display:flex;
-    align-items:center;
-    gap:40px;
-    margin-left:80px;
-    position:relative; 
-    flex:1.5;
-}
-.nav-item{
-    position:relative;
-    font-size:15px;
-    font-weight:500px;
-    cursor:pointer;
-    padding:25px 8px;
-}
-.nav-item::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:0%;
-    height:3px;
-    background:#ff3f6c;
-    transition:0.3s;
-}
+  * { margin: 0; 
+    padding: 0;
+     box-sizing: border-box;
+      font-family: 'Assistant', sans-serif; }
+  body { 
+    background: #fff; }
 
-.nav-item:hover::after{
-    width:100%;
+  /* Navbar */
+  nav { height: 70px; 
+    display: flex; 
+    align-items: center;
+     padding: 0 60px;
+      border-bottom: 1px solid #eaeaec;
+       background: #fff; 
+       position: sticky; top: 0;
+        z-index: 1000;
+     }
+  .nav-center { display: flex; align-items: center; gap: 28px; margin-left: 50px; flex: 1; }
+  .nav-item { font-size: 13.5px; font-weight: 700; cursor: pointer; padding: 24px 4px; color: #282c3f; }
+  .search-wrap { flex: 1; max-width: 480px; display: flex; align-items: center; background: #f5f5f6; border: 1px solid #d4d5d9; border-radius: 4px; padding: 9px 14px; gap: 8px; }
+  .search-wrap input { border: none; background: transparent; font-size: 14px; width: 100%; outline: none; }
+  .nav-icons { 
+    display: flex; 
+    gap: 28px; 
+    margin-left: 30px; 
 }
-.search-box input{
-    width:340px;
-    padding:10px 14px;
-    border-radius:4px;
-    border:1px solid #ccc;
-    background:#f5f5f6;
-    font-size:14px;
-    outline:none;
-}
+  .nav-icon-btn { display: flex; 
+    flex-direction: column; 
+    align-items: center;
+     gap: 2px; cursor: pointer; 
+     font-size: 11.5px;
+      font-weight: 600; }
 
-.search-box input:focus{
-    background:#fff;
-    border-color:black;
-}
-.mega-menu{
-    position:absolute;
-    top:70px;
-    left:0;
-    width:60vw;                
-    display:none;
-    padding:30px 30px;
-    box-shadow:0 6px 14px rgba(0,0,0,0.15);
-    z-index:100;
-}
-.nav-item:hover .mega-menu{
-    display:flex;
-}
-.column{
-    width:25%;
-    padding:20px;
-    border-bottom:1.5px solid #ddd;
-}
-.column:nth-child(odd){
-    background:#ffffff;
-}
+  /* Promo Strip */
+  .promo-strip { background: #fff9f0;
+     text-align: center;
+      padding: 7px; 
+      font-size: 13px;
+       font-weight: 600; }
+  .promo-strip span { color: #ff3f6c; }
 
-.column:nth-child(even){
-    background:#f5f5f5;
-}
+  /* Hero */
+  .hero { height: 420px; 
+    display: flex;
+     align-items: center;
+      justify-content: center;
+       background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #fff;
+        text-align: center; }
+  .hero h2 { 
+    font-size: 48px;
+     font-weight: 800;
+      margin-bottom: 8px; 
+    }
+  .hero p { font-size: 20px;
+     margin-bottom: 24px;
+     }
+  .hero button {
+     background: #ff3f6c; 
+     color: #fff; 
+     border: none;
+      padding: 13px 36px;
+       font-size: 14px; 
+       font-weight: 700;
+        border-radius: 4px;
+         cursor: pointer; }
 
-.column h4{
-    color:#ff3f6c;
-    font-size:14px;
-    margin-bottom:10px;
-    /* border-bottom:1.5px solid #ddd; */
-}
+  /* Sections */
+  .section { padding: 40px 60px; }
+  .section-header { display: flex; justify-content: space-between; margin-bottom: 24px; border-bottom: 2px solid #eaeaec; padding-bottom: 12px; }
+  .section-header h2 { font-size: 22px; font-weight: 800; }
+  .section-header a { font-size: 13px; color: #ff3f6c; font-weight: 700; text-decoration: none; }
 
-.column ul{
-    list-style:none;
-    border-bottom:1.5px solid #ddd;
-}
+  /* Pills */
+  .category-pills { display: flex; gap: 14px; overflow-x: auto; }
+  .pill { display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; min-width: 80px; }
+  .pill-img { width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; border: 2px solid #eaeaec; }
 
-.column ul li{
-    font-size:13px;
-    padding:4px 0;
-    color:#333;
-    cursor:pointer;
-    /* border-bottom:1.5px solid #ddd; */
-}
+  /* Grids */
+  .deals-grid, .brands-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+  .trending-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .promo-banners { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-.column ul li:hover{
-    text-decoration:underline;
-}
-.icons{
-    display:flex;
-    gap:20px;
-    font-size:18px;
-}
+  /* Cards */
+  .deal-card, .brand-card, .trend-card { border: 1px solid #eaeaec; border-radius: 8px; cursor: pointer; }
+  .deal-img, .trend-img { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 42px; }
+  .trend-img { height: 240px; font-size: 60px; }
+  .deal-info, .trend-info { padding: 10px 12px; }
+  .brand-card { padding: 20px; text-align: center; }
 
+  /* Promo Banners */
+  .promo-banner { border-radius: 10px; height: 200px; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; }
+  .pb-1 { background: linear-gradient(135deg, #667eea, #764ba2); }
+  .pb-2 { background: linear-gradient(135deg, #f7971e, #ffd200); }
+  .pb-3 { background: linear-gradient(135deg, #11998e, #38ef7d); }
+  .pb-4 { background: linear-gradient(135deg, #ee0979, #ff6a00); }
+  .promo-banner h3 { font-size: 26px; font-weight: 800; }
+
+  /* Footer */
+  footer { background: #fff; border-top: 1px solid #eaeaec; padding: 40px 60px 20px; }
+  .footer-top { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 36px; }
+  .footer-col h4 { font-size: 13px; font-weight: 800; margin-bottom: 14px; }
+  .footer-col li { list-style: none; font-size: 13px; padding: 4px 0; cursor: pointer; }
+  .footer-bottom { border-top: 1px solid #eaeaec; padding-top: 20px; display: flex; justify-content: space-between; font-size: 12px; color: #94969f; }
 </style>
 </head>
-
 <body>
 
-<nav>
-    <div id="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png">
-    </div>
-    <div class="menu-search">
-        <div class="nav-item">
-            MEN
-
-            <div class="mega-menu">
-                   <div class="column">
-                    <h4>Topwear</h4>
-                    <ul>
-                        <li>T-Shirts</li>
-                        <li>Casual Shirts</li>
-                        <li>Formal Shirts</li>
-                        <li>Sweatshirts</li>
-                        <li>Jackets</li>
-                        <li>Suits</li>
-                        <li>Rain Jackets</li>
-                    </ul>
-
-                    <h4 style="margin-top:15px;">Indian & Festive Wear</h4>
-                    <ul>
-                        <li>Kurtas & Kurta Sets</li>
-                        <li>Sherwanis</li>
-                        <li>Nehru Jackets</li>
-                        <li>Dhotis</li>
-                    </ul>
-                </div>
-
-                <div class="column">
-                    <h4>Bottomwear</h4>
-                    <ul>
-                        <li>Jeans</li>
-                        <li>Casual Trousers</li>
-                        <li>Formal Trousers</li>
-                        <li>Track Pants & Joggers</li>
-                        <li>Shorts</li>
-                    </ul>
-
-                    <h4 style="margin-top:15px;">Innerwear & Sleepwear</h4>
-                    <ul>
-                        <li>Briefs & Trunks</li>
-                        <li>Boxers</li>
-                        <li>Vests</li>
-                        <li>Sleepwear & Loungewear</li>
-                        <li>Thermals</li>
-                    </ul>
-                </div>
-
-                <div class="column">
-                    <h4>Footwear</h4>
-                    <ul>
-                        <li>Casual Shoes</li>
-                        <li>Sports Shoes</li>
-                        <li>Formal Shoes</li>
-                        <li>Sneakers</li>
-                        <li>Sandals & Floaters</li>
-                        <li>Flip Flops</li>
-                        <li>Socks</li>
-                    </ul>
-
-                    <h4 style="margin-top:15px;">Watches</h4>
-                </div>
-
-                <div class="column">
-                    <h4>Sports & Active Wear</h4>
-                    <ul>
-                        <li>Sports Shoes</li>
-                        <li>Active T-Shirts</li>
-                        <li>Track Pants & Shorts</li>
-                        <li>Tracksuits</li>
-                        <li>Jackets & Sweatshirts</li>
-                        <li>Swimwear</li>
-                    </ul>
-
-                    <h4 style="margin-top:15px;">Gadgets</h4>
-                    <ul>
-                        <li>Smart Wearables</li>
-                        <li>Fitness Gadgets</li>
-                        <li>Headphones</li>
-                        <li>Speakers</li>
-                    </ul>
-                </div>
-
-                <div class="column">
-                    <h4>Fashion Accessories</h4>
-                    <ul>
-                        <li>Wallets</li>
-                        <li>Belts</li>
-                        <li>Perfumes & Body Mists</li>
-                        <li>Trimmers</li>
-                        <li>Caps & Hats</li>
-                        <li>Phone Cases</li>
-                        <li>Rings & Wristwear</li>
-                        <li>Helmets</li>
-                    </ul>
-
-                    <h4 style="margin-top:15px;">Bags & Backpacks</h4>
-                    <h4>Luggages & Trolleys</h4>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="nav-item">WOMEN</div>
-        <div class="nav-item">KIDS</div>
-        <div class="nav-item">HOME</div>
-        <div class="nav-item">BEAUTY</div>
-        <div class="nav-item">GENZ</div>
-        <div class="nav-items">STUDIO</div>
-        <div class="search-box">
-            <input type="text" placeholder="Search for products, brands and more">
-        </div>
-    </div>
-    <div class="icons">
-        <span>🛒</span>
-        <span>👤</span>
-    </div>
-
-</nav>
-<img src="../assests/mynta1.webp" alt="" id="image">
-<div id="class">
-    <img src="../assests/myntra2.webp" alt="" id="image1">
-    <img src="../assests/myntra3.webp" alt=""id="image2">
+<!-- PROMO STRIP -->
+<div class="promo-strip">
+  🎉 Sale is LIVE! <span>50-80% OFF</span> on top brands • Free delivery on orders above ₹499
 </div>
+
+<!-- NAVBAR -->
+<nav>
+  <div>
+    <svg width="46" height="46" viewBox="0 0 100 100">
+      <polygon points="50,5 95,95 5,95" fill="#FF3F6C"/>
+      <polygon points="50,20 80,80 20,80" fill="#FF9320"/>
+      <polygon points="50,35 70,70 30,70" fill="#FFC200"/>
+    </svg>
+  </div>
+
+  <div class="nav-center">
+    <div class="nav-item">MEN</div>
+    <div class="nav-item">WOMEN</div>
+    <div class="nav-item">KIDS</div>
+    <div class="nav-item">HOME</div>
+    <div class="nav-item">BEAUTY</div>
+    <div class="nav-item">STUDIO</div>
+
+    <div class="search-wrap">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Search for products, brands and more">
+    </div>
+  </div>
+
+  <div class="nav-icons">
+    <div class="nav-icon-btn">
+      <i class="fa-regular fa-user"></i>
+      <span>Profile</span>
+    </div>
+    <div class="nav-icon-btn">
+      <i class="fa-regular fa-heart"></i>
+      <span>Wishlist</span>
+    </div>
+    <div class="nav-icon-btn">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Bag</span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h2>END OF SEASON SALE</h2>
+    <p>50–80% off on top brands</p>
+    <button>SHOP NOW →</button>
+  </div>
+</div>
+
+<!-- CATEGORY PILLS -->
+<div class="section">
+  <div class="section-header">
+    <h2>Shop by Category</h2>
+    <a href="#">View All →</a>
+  </div>
+  <div class="category-pills">
+    <div class="pill"><div class="pill-img" style="background:#fff0f3;">👔</div><span>Men</span></div>
+    <div class="pill"><div class="pill-img" style="background:#fff0f3;">👗</div><span>Women</span></div>
+    <div class="pill"><div class="pill-img" style="background:#fff4ee;">👧</div><span>Kids</span></div>
+    <div class="pill"><div class="pill-img" style="background:#f0fffe;">💄</div><span>Beauty</span></div>
+    <div class="pill"><div class="pill-img" style="background:#f0f8ff;">🏃</div><span>Sports</span></div>
+    <div class="pill"><div class="pill-img" style="background:#fffaf0;">👟</div><span>Footwear</span></div>
+  </div>
+</div>
+
+<!-- PROMO BANNERS -->
+<div class="section" style="padding-top:0">
+  <div class="promo-banners">
+    <div class="promo-banner pb-1">
+      <div>
+        <h3>WOMEN'S WESTERN WEAR</h3>
+        <p>Dresses Under ₹599 • Tops Under ₹399</p>
+      </div>
+    </div>
+    <div class="promo-banner pb-2">
+      <div>
+        <h3>MEN'S CASUAL WEAR</h3>
+        <p>T-shirts Under ₹299 • Shirts Under ₹499</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEST DEALS -->
+<div class="section" style="background:#f5f5f6;">
+  <div class="section-header">
+    <h2>💥 Best Deals on Top Brands</h2>
+    <a href="#">View All →</a>
+  </div>
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-img" style="background:#f8f9fa;">🏃</div>
+      <div class="deal-info">
+        <div style="font-size:13px;font-weight:800;">PUMA</div>
+        <div style="font-size:12px;color:#535766;">Men Sports Shoes</div>
+        <div style="margin-top:4px;">
+          <span style="font-size:14px;font-weight:800;">₹1,299</span>
+          <span style="font-size:12px;color:#94969f;text-decoration:line-through;">₹3,499</span>
+          <span style="font-size:12px;color:#ff905a;font-weight:700;">63% off</span>
+        </div>
+      </div>
+    </div>
+    <div class="deal-card">
+      <div class="deal-img" style="background:#fff0f5;">👗</div>
+      <div class="deal-info">
+        <div style="font-size:13px;font-weight:800;">H&M</div>
+        <div style="font-size:12px;color:#535766;">Women Dress</div>
+        <div style="margin-top:4px;">
+          <span style="font-size:14px;font-weight:800;">₹799</span>
+          <span style="font-size:12px;color:#94969f;text-decoration:line-through;">₹1,999</span>
+          <span style="font-size:12px;color:#ff905a;font-weight:700;">60% off</span>
+        </div>
+      </div>
+    </div>
+    <div class="deal-card">
+      <div class="deal-img" style="background:#f0f5ff;">👖</div>
+      <div class="deal-info">
+        <div style="font-size:13px;font-weight:800;">LEVI'S</div>
+        <div style="font-size:12px;color:#535766;">Men Slim Jeans</div>
+        <div style="margin-top:4px;">
+          <span style="font-size:14px;font-weight:800;">₹1,499</span>
+          <span style="font-size:12px;color:#94969f;text-decoration:line-through;">₹3,999</span>
+          <span style="font-size:12px;color:#ff905a;font-weight:700;">63% off</span>
+        </div>
+      </div>
+    </div>
+    <div class="deal-card">
+      <div class="deal-img" style="background:#fff5f0;">💄</div>
+      <div class="deal-info">
+        <div style="font-size:13px;font-weight:800;">LAKMÉ</div>
+        <div style="font-size:12px;color:#535766;">Lipstick Combo</div>
+        <div style="margin-top:4px;">
+          <span style="font-size:14px;font-weight:800;">₹349</span>
+          <span style="font-size:12px;color:#94969f;text-decoration:line-through;">₹699</span>
+          <span style="font-size:12px;color:#ff905a;font-weight:700;">50% off</span>
+        </div>
+      </div>
+    </div>
+    <div class="deal-card">
+      <div class="deal-img" style="background:#f0f8ff;">👕</div>
+      <div class="deal-info">
+        <div style="font-size:13px;font-weight:800;">TOMMY HILFIGER</div>
+        <div style="font-size:12px;color:#535766;">Men Polo T-Shirt</div>
+        <div style="margin-top:4px;">
+          <span style="font-size:14px;font-weight:800;">₹999</span>
+          <span style="font-size:12px;color:#94969f;text-decoration:line-through;">₹2,499</span>
+          <span style="font-size:12px;color:#ff905a;font-weight:700;">60% off</span>
+        </div>
+      </div>
+    </div>
+    <div class="deal-card">
+      <div class="deal-img" style="background:#f0fff5;">🎒</div>
+      <div class="deal-info">
+        <div style="font-size:13px;font-weight:800;">WILDCRAFT</div>
+        <div style="font-size:12px;color:#535766;">Backpack 30L</div>
+        <div style="margin-top:4px;">
+          <span style="font-size:14px;font-weight:800;">₹699</span>
+          <span style="font-size:12px;color:#94969f;text-decoration:line-through;">₹1,799</span>
+          <span style="font-size:12px;color:#ff905a;font-weight:700;">61% off</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP BRANDS -->
+<div class="section">
+  <div class="section-header">
+    <h2>🏆 Top Brands</h2>
+    <a href="#">View All →</a>
+  </div>
+  <div class="brands-grid">
+    <div class="brand-card">
+      <div style="font-size:36px;">👖</div>
+      <div style="font-size:13px;font-weight:800;">LEVI'S</div>
+      <div style="font-size:12px;color:#ff905a;font-weight:700;">Up to 60% off</div>
+    </div>
+    <div class="brand-card">
+      <div style="font-size:36px;">👟</div>
+      <div style="font-size:13px;font-weight:800;">NIKE</div>
+      <div style="font-size:12px;color:#ff905a;font-weight:700;">Up to 50% off</div>
+    </div>
+    <div class="brand-card">
+      <div style="font-size:36px;">🧥</div>
+      <div style="font-size:13px;font-weight:800;">ROADSTER</div>
+      <div style="font-size:12px;color:#ff905a;font-weight:700;">Up to 70% off</div>
+    </div>
+    <div class="brand-card">
+      <div style="font-size:36px;">👗</div>
+      <div style="font-size:13px;font-weight:800;">ONLY</div>
+      <div style="font-size:12px;color:#ff905a;font-weight:700;">Up to 65% off</div>
+    </div>
+    <div class="brand-card">
+      <div style="font-size:36px;">🏃</div>
+      <div style="font-size:13px;font-weight:800;">ADIDAS</div>
+      <div style="font-size:12px;color:#ff905a;font-weight:700;">Up to 55% off</div>
+    </div>
+    <div class="brand-card">
+      <div style="font-size:36px;">💃</div>
+      <div style="font-size:13px;font-weight:800;">AND</div>
+      <div style="font-size:12px;color:#ff905a;font-weight:700;">Up to 60% off</div>
+    </div>
+  </div>
+</div>
+
+<!-- TRENDING -->
+<div class="section" style="background:#fff8f8;">
+  <div class="section-header">
+    <h2>🔥 Trending Now</h2>
+    <a href="#">View All →</a>
+  </div>
+  <div class="trending-grid">
+    <div class="trend-card">
+      <div class="trend-img" style="background:linear-gradient(135deg,#fff0f3,#ffe0e8);">👗</div>
+      <div class="trend-info">
+        <div style="font-size:14px;font-weight:800;">MANGO</div>
+        <div style="font-size:13px;color:#535766;">Floral Wrap Dress</div>
+        <div style="margin-top:6px;">
+          <span style="font-size:14px;font-weight:800;">₹2,699</span>
+          <span style="font-size:13px;color:#94969f;text-decoration:line-through;">₹5,999</span>
+          <span style="font-size:12px;color:#ff905a;font-weight:700;">55% off</span>
+        </div>
+      </div>
+    </div>
+    <div class="trend-card">
+      <div class="trend-img" style="background:linear-gradient(135deg,#f0f4ff,#e0e8ff);">👟</div>
+      <div class="trend-info">
+        <div style="font-size:14px;font-weight:800;">PUMA</div>
+        <div style="font-size:13px;color:#535766;">RS-X Sneakers</div>
+        <div style="margin-top:6px;">
+          <span style="font-size:14px;font-weight:800;">₹3,499</span>
+          <span style="font-size:13px;color:#94969f;text-decoration:line-through;">₹7,999</span>
+          <span style="font-size:12px;color:#ff905a;font-weight:700;">56% off</span>
+        </div>
+      </div>
+    </div>
+    <div class="trend-card">
+      <div class="trend-img" style="background:linear-gradient(135deg,#f0fff5,#d0ffe8);">🧴</div>
+      <div class="trend-info">
+        <div style="font-size:14px;font-weight:800;">MAMAEARTH</div>
+        <div style="font-size:13px;color:#535766;">Ubtan Face Wash</div>
+        <div style="margin-top:6px;">
+          <span style="font-size:14px;font-weight:800;">₹199</span>
+          <span style="font-size:13px;color:#94969f;text-decoration:line-through;">₹399</span>
+          <span style="font-size:12px;color:#ff905a;font-weight:700;">50% off</span>
+        </div>
+      </div>
+    </div>
+    <div class="trend-card">
+      <div class="trend-img" style="background:linear-gradient(135deg,#fffaf0,#fff0d0);">⌚</div>
+      <div class="trend-info">
+        <div style="font-size:14px;font-weight:800;">FOSSIL</div>
+        <div style="font-size:13px;color:#535766;">Men Analogue Watch</div>
+        <div style="margin-top:6px;">
+          <span style="font-size:14px;font-weight:800;">₹5,999</span>
+          <span style="font-size:13px;color:#94969f;text-decoration:line-through;">₹14,995</span>
+          <span style="font-size:12px;color:#ff905a;font-weight:700;">60% off</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-col">
+      <h4>ONLINE SHOPPING</h4>
+      <ul>
+        <li>Men</li><li>Women</li><li>Kids</li><li>Beauty</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>CUSTOMER POLICIES</h4>
+      <ul>
+        <li>Contact Us</li><li>FAQ</li><li>Shipping</li><li>Returns</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>EXPERIENCE MYNTRA APP</h4>
+      <div style="display:flex;gap:10px;margin-top:10px;">
+        <div style="background:#282c3f;color:#fff;padding:8px 14px;border-radius:6px;font-size:12px;">🍎 App Store</div>
+        <div style="background:#282c3f;color:#fff;padding:8px 14px;border-radius:6px;font-size:12px;">🤖 Google Play</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>100% ORIGINAL</h4>
+      <p style="font-size:13px;color:#535766;">Guarantee for all products</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 www.myntra.com. All rights reserved.</span>
+  </div>
+</footer>
+
 </body>
 </html>
-

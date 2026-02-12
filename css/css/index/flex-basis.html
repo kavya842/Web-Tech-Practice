@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+        }
+        a{
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        #logo{
+            flex-basis: 20%;
+            /* background-color: rebeccapurple; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #navigation_options{
+            flex-basis: 50%;
+            /* background-color: blue; */
+            justify-content: space-evenly;
+            align-items: center;
+            display: flex;
+        }
+        #user_details{
+            flex-basis: 35%;
+            /* background-color: orangered; */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <div><a href="">Logo</a></div>
+        </div>
+        <div id="navigation_options">
+            <div><a href="">HOME</a></div>
+            <div><a href="">About</a></div>
+            <div><a href="">Contact</a></div>
+            <div><a href="">Help</a></div>
+        </div>
+        <div id="user_details">
+            <div><a href="">Register</a></div>
+            <div><a href="">login</a></div>
+        </div>
+    </nav>
+</body>
+</html>

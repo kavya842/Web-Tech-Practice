@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+         <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        nav{
+            height: 80px;
+            width: 100%;
+            /* background-color: black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-left: 230px; */
+        }
+        #part1{
+            flex-basis: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #part2{
+            flex-basis: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* background-color: rebeccapurple; */
+        }
+        #part3{
+            flex-basis: 40%;
+            display: flex;
+            margin-left: 300px;
+            /* justify-content: space-around; */
+            /* align-items: center; */
+            /* background-color: aqua; */
+        }
+        #pic{
+            height: 30px;
+            width: 30px;
+            background-color: black;
+            border-radius: 50%;
+            background-image: url("../Assets/Passport\ image.JPG");
+            background-size: cover;
+        }
+        hr{
+            margin-top: 10px;
+            /* margin-left: 300px; */
+            border: 0.5px solid whitesmoke;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        h1{
+            margin-left:70px ;
+        }
+        p{
+            margin-right:40px ;
+            margin-top: 5px;
+        }
+        #container{
+            height: 600px;
+            width: 100%;
+            /* border: 2px solid black; */
+            /* margin-left: 300px; */
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #box1{
+            height: 550px;
+            width: 400px;
+            /* background-color: lightgreen; */
+            margin: 30px 0 0 0;
+
+        }
+        #box2{
+            height: 550px;
+            width: 400px;
+            /* background-color: green; */
+            margin: 30px 0 0 0;
+
+        }
+        img{
+            height: 350px;
+            width: 330px;
+            margin: 40px 0 0 0;
+            border-radius: 20px;
+        }
+        #img1{
+            margin: 10px 0 0 0;
+            height: 70px;
+            width: 70px;
+        }
+        #img2{
+            margin: 10px 0 0 10px;
+            height: 70px;
+            width: 70px;
+
+        }
+        #img3{
+             margin: 10px 0 0 15px;
+            height: 70px;
+            width: 70px;
+
+        }
+        #img4{
+                margin: 10px 0 0 15px;
+                height: 70px;
+                width: 70px;
+        }
+        #heading{
+            margin: 90px 0 0 0;
+            font-size: 15px;
+        }
+        #p1{
+            margin: 16px 0 0 0;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        #p2{
+            margin: 16px 10px 0 0;
+            font-size: 15px;
+            line-height: 20px;
+        }
+        h2{
+            margin: 10px 0 0 0;
+        }
+        #add{
+            height: 40px;
+            width: 130px;
+            background-color: aliceblue;
+            margin-top: 30px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border-radius: 10px;
+        }
+        #bottom{
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+        }
+        #strong{
+            cursor: pointer;
+            font-size: 13px;
+        }
+        #s1{
+            font-size: 15px;
+        }
+        #discount{
+            height: 20px;
+            width: 40px;
+            background-color: black;
+            display: inline-block;
+            /* margin-left: 10px; */
+            border-radius: 5px;
+            color:white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 20px;
+        }
+        a:hover{
+            color:black;
+
+
+        }
+        #cart{
+            width:180px;
+            height:40px;
+            color: black;
+            margin-top: 30px;
+            /* margin-left: 20px; */
+            background-color: orangered;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+      <nav>
+        <div id="part1">
+            <div><h1>Sneakers</h1></div>
+        </div>
+        <div id="part2">
+            <div><a href="">Collections</a></div>
+            <div><a href="">Men</a></div>
+            <div><a href="">Women</a></div>
+            <div><a href="">About</a></div>
+            <div><a href="">Contact</a></div>
+            
+        </div>
+        <div id="part3">
+            <div><a href=""><p>🛒</p></a></div>
+            <div id="pic"></div>
+        </div>
+    </nav>
+    <hr> 
+
+    <div id="container">
+        <div id="box1">
+            <img src="https://www.campusshoes.com/cdn/shop/files/LEVEL_LEVEL_WHT-L.GRY_07_831c7a2c-ff1b-4011-9268-b11f984219c6_1024x.webp?v=1757580207" alt="">
+            <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/shoe/s/h/e/6-walking-shoes-men-boys-1300-6-0-fastnslow-green-original-imahfdyzvzzs4wen.jpeg?q=90" alt="" id="img1">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2025/2/486091003/CZ/ZV/DF/220878650/edgar-gents-sports-shoes-500x500.jpg" alt="" id="img2">
+            <img src="https://img.kwcdn.com/product/fancy/343d7869-e81a-4988-8607-344da7c2b821.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="" id="img3">
+            <img src="https://redtape.com/cdn/shop/files/RSL0493A_1_jpg.jpg?v=1756809947" alt="" id="img4">
+        </div>
+        <div id="box2">
+            <p id="heading">SNEAKER COMPANY</p>
+            <p id="p1">Fall Limited Edition Sneaker</p>
+            <p id="p2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore aliquam eum cupiditate nostrum, eius fugiat, aut autem tenetur adipisci minima tempore amquam quod!</p>
+            <h2>$125.00 <div id="discount">50%</div></h2>
+            <p style="text-decoration: line-through; color: gray;">$250.00</p>
+            <div id="bottom">
+            <div id="add"><pre>   ➖    <strong id="s1">1</strong>   ➕  </pre></div>
+            <button  id="cart"><strong>🛒 Add to Cart</strong></button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

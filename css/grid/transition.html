@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #container{
+            height: 800px;
+            width: 1000px;
+            border: 2px solid red;
+            align-items: center;
+            margin-left: 400px;
+        }
+        #box1{
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            margin-top: 80px;
+        }
+        #box2{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+            margin-top: 80px;
+        }
+        #container:hover{
+            #box1{
+                /* background-color: ; */
+                margin-left: 800px;
+                /* transition: all 4s ease ; */
+                /* transition: all 4s ease-in; start slow end fast  */
+                /* transition: all 4s ease-out; */
+                transition: all 4s ease-in-out;
+            }
+            #box2{
+                margin-left: 800px;
+                transition: all 4s linear;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="box1"></div>
+    <div id="box2"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+ #btn{
+            height: 60px;
+            width: 300px;
+            background-color: aqua;
+            color: black;
+            font-size: 30px ;
+            border-radius: 25px;
+            margin: 100px 100px;
+            border: none;
+        }
+#btn:hover{
+    background-color: rgb(22, 27, 176);
+}
+img{
+    height: 450px;
+    width: 450px;
+}
+img:hover{
+    border-radius:50%;
+    transition-duration:3s;
+}
+input{
+    height: 50px;
+    width: 400px;
+    margin-left: 100px;
+    border: none;
+}
+input:focus{
+    background-color:orange;
+    outline: 0.9px solid blanchedalmond;
+    color: azure;
+    font-size: 20px;
+}
+a:link{
+    color: aqua;
+}
+a:visited{
+    color: black;
+}
+a:active{
+    color: blue;
+}
+li:first-child{
+    background-color: blueviolet;
+}
+li:last-child{
+    background-color: palevioletred;
+}
+li:nth-child{
+    background-color: blue;
+}
+li:nth-last-child{
+    background-color: orange;
+}
+li:nth-last-of-type{
+    background-color: greenyellow;
+}

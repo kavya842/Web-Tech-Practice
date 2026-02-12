@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Output</title>
+    <style>
+        #container{
+            height: 400px;
+            width: 800px;
+            background-color: black;
+            margin: 60px auto;
+            display: flex;
+        }
+
+        /* LEFT BIG BOX */
+        #left{
+            height: 400px;
+            width: 400px;
+            background-color: orangered;
+        }
+
+        /* RIGHT SIDE */
+        #right{
+            height: 400px;
+            width: 400px;
+            background-color: white;
+        }
+
+        #right-top{
+            height: 200px;
+            width: 400px;
+            background-color: black;
+        }
+
+        #right-bottom{
+            height: 200px;
+            width: 400px;
+            display: flex;
+        }
+
+        .small{
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            border: 0.5px solid white;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="left"></div>
+
+        <div id="right">
+            <div id="right-top"></div>
+            <div id="right-bottom">
+                <div class="small"></div>
+                <div class="small"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

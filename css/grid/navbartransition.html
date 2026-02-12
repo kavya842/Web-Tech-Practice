@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container{
+            height:500px;
+            width:100%;
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-evenly;
+            border: 2px solid red;
+        }
+        nav{
+            background-color: black;
+            color: white;
+            text-align: center;
+            justify-content: space-evenly;
+            display: flex;
+            height:65px;
+            width:100%;
+            font-size: 20px;
+            padding: 15px;
+            align-items: center;
+            
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .nav{
+               position:relative;
+               font-size:25px;
+               font-weight:600;
+               cursor:pointer;
+               padding:25px 5px;
+        }
+        .nav::after{
+            content:"";
+            position:absolute;
+             left:0;
+             bottom:0;
+             padding-bottom: 5;
+             width:0%;
+             height:5px;
+             background:#ff3f6c;
+             transition:0.5s;
+        }
+           .nav:hover::after{
+            width:100%;
+        }
+        #box1{
+        height: 400px;
+        width: 300px;
+        /* background-color: tomato; */
+        margin: 50px auto;
+
+    }
+    #box2{
+        height: 400px;
+        width: 300px;
+        /* background-color: blue; */
+        margin: 50px auto;
+
+    }
+    #box3{
+        height: 400px;
+        width: 300px;
+        /* background-color: green; */
+        margin: 50px auto;
+
+    }
+     #box1:hover::after{
+        background-color: pink;
+     }
+      #box1::after{
+        content: "";
+        width: 0%;
+        height: 3px;
+        background-color: red;
+        position: absolute;
+        padding-bottom: 5;
+        transition: 0.5s linear;
+        
+    }   
+    #container>div{
+        height: 500px;
+        width: 30%;
+        background-color: black;
+
+    }
+    #container:hover>:not(:hover){
+        background-color: red;
+        filter: blur(5px);
+    }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav"><a href="#">Home</a></div>
+        <div class="nav"><a href="#">About</a></div>
+        <div class="nav"><a href="#">Contact</a></div>
+        <div class="nav"><a href="#">Register</a></div>
+        <div class="nav"><a href="#">Login</a></div>
+    </nav>
+    <div id="container">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+</body>
+</html>

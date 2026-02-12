@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+         body{
+            background-color: black;
+            color: white;
+            background-image: url(https://www.shutterstock.com/image-photo/our-unique-universe-260nw-1093559528.jpg);
+             background-size: cover; 
+             background-position: center; 
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+        }
+
+        #container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+        nav{
+            height: 70px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover{
+            border-bottom: 2px solid white;
+        }
+
+        
+        .content{
+            flex: 1;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .left{
+            width: 40%;
+        }
+
+        .left h3{
+            letter-spacing: 3px;
+            color: gray;
+        }
+
+        .left h1{
+            font-size: 80px;
+            margin: 20px 0;
+        }
+         .left p{
+            color: lightgray;
+            line-height: 25px;
+        }
+            .right{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            color: black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+           .right:hover{
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+ <nav>
+        <a href="#">00 HOME</a>
+        <a href="#">01 DESTINATION</a>
+        <a href="#">02 CREW</a>
+        <a href="#">03 TECHNOLOGY</a>
+    </nav>
+    <div class="content">
+        <div class="left">
+            <h3>SO, YOU WANT TO TRAVEL TO</h3>
+            <h1>SPACE</h1>
+            <p>
+                Let's face it; if you want to go to space, you might as well genuinely
+                go to outer space and not hover kind of on the edge.
+            </p>
+        </div>
+        <div class="right">
+            EXPLORE
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

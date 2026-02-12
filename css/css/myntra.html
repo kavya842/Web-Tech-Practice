@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+            height:70px;
+            background:#fff;
+            display:flex;
+            align-items:center;
+            padding:0 60px;
+            border-bottom:1.5px solid #ddd;
+            position: relative;
+        }
+        #logo img{
+            height:45px;
+        }
+        .nav-center{
+            display:flex;
+            align-items:center;
+            gap:35px;
+            margin-left:60px;
+            flex:1;
+        }
+        .nav-item{
+            position:relative;
+            font-size:14px;
+            font-weight:700;
+            cursor:pointer;
+            padding:25px 0;
+            letter-spacing: 0.3px;
+        }
+        .nav-item::after{
+            content:"";
+            position:absolute;
+            left:0;
+            bottom:0;
+            width:0%;
+            height:4px;
+            background:#ff3f6c;
+            transition:0.3s;
+        }
+        .nav-item:hover::after{
+            width:100%;
+        }
+        .search-wrap{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            background:#f5f5f6;
+            padding:10px 14px;
+            border-radius:4px;
+            border:1px solid #f5f5f6;
+            width: 450px;
+        }
+        .search-wrap i{
+            color: #282c3f;
+            font-size: 14px;
+        }
+        .search-wrap input{
+            width:100%;
+            border:none;
+            background:transparent;
+            font-size:14px;
+            outline:none;
+            color: #282c3f;
+        }
+        .search-wrap input::placeholder{
+            color: #94969f;
+        }
+        .search-wrap:focus-within{
+            background:#fff;
+            border-color:#d4d5d9;
+        }
+        .nav-icons{
+            display:flex;
+            gap:32px;
+            margin-left:auto;
+        }
+        .nav-icon-btn{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:4px;
+            cursor:pointer;
+            font-size:12px;
+            font-weight:700;
+            color: #282c3f;
+        }
+        .nav-icon-btn i{
+            font-size:20px;
+        }
+
+        /* Mega Menu */
+       .mega-menu{
+    position: fixed;        
+    top: 70px;                
+    left: 140px;
+    width: 60vw;             
+    height: 460px;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
+    padding: 40px 140px;
+    display: none;
+    z-index: 999;
+}
+        .nav-item:hover .mega-menu{
+            display: flex;
+        }
+        .mega-menu-content{
+            display: flex;
+            gap: 60px;
+            width: 100%;
+        }
+        .menu-column{
+            flex: 1;
+        }
+        .menu-column h3{
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+        .menu-column ul{
+            list-style: none;
+        }
+        .menu-column ul li{
+            font-size: 14px;
+            color: #282c3f;
+            margin-bottom: 8px;
+            cursor: pointer;
+            font-weight: 400;
+        }
+        .menu-column ul li:hover{
+            color: #ff3f6c;
+            font-weight: 500;
+        }
+
+        /* Color coding for different sections */
+        .men-menu h3{color:  #fb56c1;}
+        .women-menu h3{color: #fb56c1;}
+        .kids-menu h3{color: #f26a10;}
+        .home-menu h3{color: #f2c210;}
+        .beauty-menu h3{color: #0db7af;}
+        .genz-menu h3{color: #ff3f6c;}
+
+      #image{
+            width:100%;
+            margin-top:10px;
+        } 
+        #class{
+            display:flex;
+            gap:0px;
+            padding:10px 90px; 
+            height:590px;
+        }
+        #class img{
+            width:50%;
+        }
+        .ids{
+    height:300px;
+    width:270px;
+    
+}
+.shops{
+ height:300px;
+ width:225px;
+}
+#sh6{
+    margin-left: 350px;
+}
+#p1, #luxs, #medals, #globals{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+
+}
+#shop1,#shop2,#shop3,#shop4,#shop5{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+
+#paracontainer {
+        height: 500px;
+        width: 100%;
+        /* border: 2px solid red; */
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-evenly;
+        /* line-height: 23px; */
+        /* gap:80px; */
+        padding-top: 60px;
+      }
+      #box1 {
+        height: 400px;
+        width: 200px;
+        /* border: 2px solid red; */
+        margin-left: 30px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      #paracontainer2 {
+        height: 130px;
+        width: 100%;
+        /* border: 2px solid red; */
+        padding: 10px 105px;
+        font-size: 15px;
+        line-height: 24px;
+      }
+      #box2 {
+        height: 400px;
+        width: 200px;
+        /* border: 2px solid red; */
+        line-height: 23px;
+        font-size: 16px;
+      }
+      #box3 {
+        height: 400px;
+        width: 300px;
+        /* border: 2px solid red; */
+      }
+      #box4 {
+        height: 400px;
+        width: 250px;
+        /* border: 2px solid red; */
+      }
+      #apps {
+        height: 50px;
+        width: 300px;
+        margin-top: 28px;
+        /* border: 2px solid red; */
+      }
+      #social {
+        height: 40px;
+        width: 140px;
+        /* border: 2px solid red; */
+      }
+      #apps1 {
+        height: 80px;
+        width: 250px;
+        margin-top: 10px;
+        /* border: 2px solid red; */
+        display: flex;
+        padding: auto;
+        word-spacing: 5px;
+      }
+      #paraco{
+        height: 900px;
+        width:100%;
+        /* border: 2px solid red; */
+        padding: 0px 105px;
+         line-height: 24px;
+      }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png">
+        </div>
+        <div class="nav-center">
+            <div class="nav-item">MEN
+                <div class="mega-menu men-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h3>Topwear</h3>
+                            <ul>
+                                <li>T-Shirts</li>
+                                <li>Casual Shirts</li>
+                                <li>Formal Shirts</li>
+                                <li>Sweatshirts</li>
+                                <li>Sweaters</li>
+                                <li>Jackets</li>
+                                <li>Blazers & Coats</li>
+                                <li>Suits</li>
+                            </ul>
+                            <h3>Bottomwear</h3>
+                            <ul>
+                                <li>Jeans</li>
+                                <li>Casual Trousers</li>
+                                <li>Formal Trousers</li>
+                                <li>Shorts</li>
+                                <li>Track Pants</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Indian & Festive Wear</h3>
+                            <ul>
+                                <li>Kurtas & Kurta Sets</li>
+                                <li>Sherwanis</li>
+                                <li>Nehru Jackets</li>
+                                <li>Dhotis</li>
+                            </ul>
+                            <h3>Footwear</h3>
+                            <ul>
+                                <li>Casual Shoes</li>
+                                <li>Sports Shoes</li>
+                                <li>Formal Shoes</li>
+                                <li>Sneakers</li>
+                                <li>Sandals & Floaters</li>
+                                <li>Flip Flops</li>
+                                <li>Socks</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Sports & Active Wear</h3>
+                            <ul>
+                                <li>Sports Shoes</li>
+                                <li>Sports Sandals</li>
+                                <li>Active T-Shirts</li>
+                                <li>Track Pants & Shorts</li>
+                                <li>Tracksuits</li>
+                                <li>Swimwear</li>
+                            </ul>
+                            <h3>Gadgets</h3>
+                            <ul>
+                                <li>Smart Wearables</li>
+                                <li>Fitness Gadgets</li>
+                                <li>Headphones</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Fashion Accessories</h3>
+                            <ul>
+                                <li>Wallets</li>
+                                <li>Belts</li>
+                                <li>Perfumes & Body Mists</li>
+                                <li>Trimmers</li>
+                                <li>Deodorants</li>
+                                <li>Caps & Hats</li>
+                                <li>Phone Cases</li>
+                            </ul>
+                            <h3>Bags & Backpacks</h3>
+                            <h3>Luggages & Trolleys</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">WOMEN
+                <div class="mega-menu women-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h3>Indian & Fusion Wear</h3>
+                            <ul>
+                                <li>Kurtas & Suits</li>
+                                <li>Kurtis, Tunics & Tops</li>
+                                <li>Sarees</li>
+                                <li>Ethnic Wear</li>
+                                <li>Leggings, Salwars & Churidars</li>
+                                <li>Skirts & Palazzos</li>
+                                <li>Dress Materials</li>
+                                <li>Lehenga Cholis</li>
+                                <li>Dupattas & Shawls</li>
+                                <li>Jackets</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Western Wear</h3>
+                            <ul>
+                                <li>Dresses</li>
+                                <li>Tops</li>
+                                <li>Tshirts</li>
+                                <li>Jeans</li>
+                                <li>Trousers & Capris</li>
+                                <li>Shorts & Skirts</li>
+                                <li>Co-ords</li>
+                                <li>Playsuits</li>
+                                <li>Jumpsuits</li>
+                                <li>Shrugs</li>
+                                <li>Sweaters & Sweatshirts</li>
+                                <li>Jackets & Coats</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Footwear</h3>
+                            <ul>
+                                <li>Flats</li>
+                                <li>Casual Shoes</li>
+                                <li>Heels</li>
+                                <li>Boots</li>
+                                <li>Sports Shoes & Floaters</li>
+                            </ul>
+                            <h3>Sports & Active Wear</h3>
+                            <ul>
+                                <li>Clothing</li>
+                                <li>Footwear</li>
+                                <li>Sports Accessories</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Lingerie & Sleepwear</h3>
+                            <ul>
+                                <li>Bra</li>
+                                <li>Briefs</li>
+                                <li>Shapewear</li>
+                                <li>Sleepwear & Loungewear</li>
+                                <li>Swimwear</li>
+                                <li>Camisoles & Thermals</li>
+                            </ul>
+                            <h3>Beauty & Personal Care</h3>
+                            <ul>
+                                <li>Makeup</li>
+                                <li>Skincare</li>
+                                <li>Fragrances</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Gadgets</h3>
+                            <ul>
+                                <li>Smart Wearables</li>
+                                <li>Fitness Gadgets</li>
+                                <li>Headphones</li>
+                            </ul>
+                            <h3>Jewellery</h3>
+                            <ul>
+                                <li>Fashion Jewellery</li>
+                                <li>Fine Jewellery</li>
+                                <li>Earrings</li>
+                            </ul>
+                            <h3>Backpacks</h3>
+                            <h3>Handbags & Wallets</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">KIDS
+                <div class="mega-menu kids-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h3>Boys Clothing</h3>
+                            <ul>
+                                <li>T-Shirts</li>
+                                <li>Shirts</li>
+                                <li>Shorts</li>
+                                <li>Jeans</li>
+                                <li>Trousers</li>
+                                <li>Clothing Sets</li>
+                                <li>Ethnic Wear</li>
+                                <li>Track Pants & Pyjamas</li>
+                                <li>Jacket & Sweatshirts</li>
+                                <li>Party Wear</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Girls Clothing</h3>
+                            <ul>
+                                <li>Dresses</li>
+                                <li>Tops</li>
+                                <li>Tshirts</li>
+                                <li>Clothing Sets</li>
+                                <li>Lehenga choli</li>
+                                <li>Kurta Sets</li>
+                                <li>Party wear</li>
+                                <li>Dungarees & Jumpsuits</li>
+                                <li>Skirts & shorts</li>
+                                <li>Tights & Leggings</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Footwear</h3>
+                            <ul>
+                                <li>Casual Shoes</li>
+                                <li>Flipflops</li>
+                                <li>Sports Shoes</li>
+                                <li>Flats</li>
+                                <li>Sandals</li>
+                                <li>Heels</li>
+                                <li>School Shoes</li>
+                                <li>Socks</li>
+                            </ul>
+                            <h3>Toys & Games</h3>
+                            <ul>
+                                <li>Learning & Development</li>
+                                <li>Activity Toys</li>
+                                <li>Soft Toys</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Infants</h3>
+                            <ul>
+                                <li>Bodysuits</li>
+                                <li>Rompers & Sleepsuits</li>
+                                <li>Clothing Sets</li>
+                                <li>Tshirts & Tops</li>
+                                <li>Dresses</li>
+                                <li>Bottom wear</li>
+                                <li>Winter Wear</li>
+                                <li>Infant Care</li>
+                            </ul>
+                            <h3>Home & Bath</h3>
+                            <h3>Personal Care</h3>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Kids Accessories</h3>
+                            <ul>
+                                <li>Bags & Backpacks</li>
+                                <li>Watches</li>
+                                <li>Jewellery & Hair accessory</li>
+                                <li>Sunglasses</li>
+                                <li>Caps & Hats</li>
+                            </ul>
+                            <h3>Brands</h3>
+                            <ul>
+                                <li>H&M</li>
+                                <li>Max Kids</li>
+                                <li>Pantaloons</li>
+                                <li>YK</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">HOME
+                <div class="mega-menu home-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h3>Bed Linen & Furnishing</h3>
+                            <ul>
+                                <li>Bed Runners</li>
+                                <li>Mattress Protectors</li>
+                                <li>Bedsheets</li>
+                                <li>Bedding Sets</li>
+                                <li>Blankets, Quilts & Dohars</li>
+                                <li>Pillows & Pillow Covers</li>
+                                <li>Bed Covers</li>
+                            </ul>
+                            <h3>Flooring</h3>
+                            <ul>
+                                <li>Floor Runners</li>
+                                <li>Carpets</li>
+                                <li>Door Mats</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Bath</h3>
+                            <ul>
+                                <li>Bath Towels</li>
+                                <li>Hand & Face Towels</li>
+                                <li>Beach Towels</li>
+                                <li>Towels Set</li>
+                                <li>Bath Rugs</li>
+                                <li>Bath Robes</li>
+                                <li>Bathroom Accessories</li>
+                            </ul>
+                            <h3>Lamps & Lighting</h3>
+                            <ul>
+                                <li>Floor Lamps</li>
+                                <li>Ceiling Lamps</li>
+                                <li>Table Lamps</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Home Décor</h3>
+                            <ul>
+                                <li>Plants & Planters</li>
+                                <li>Aromas & Candles</li>
+                                <li>Clocks</li>
+                                <li>Mirrors</li>
+                                <li>Wall Décor</li>
+                                <li>Festive Decor</li>
+                                <li>Pooja Essentials</li>
+                                <li>Wall Shelves</li>
+                                <li>Showpieces & Vases</li>
+                            </ul>
+                            <h3>Cushions & Covers</h3>
+                            <h3>Curtains</h3>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Furniture</h3>
+                            <h3>Kitchen & Table</h3>
+                            <ul>
+                                <li>Table Runners</li>
+                                <li>Dinnerware & Serveware</li>
+                                <li>Cups and Mugs</li>
+                                <li>Bakeware & Cookware</li>
+                                <li>Kitchen Storage & Tools</li>
+                                <li>Bar & Drinkware</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Storage</h3>
+                            <ul>
+                                <li>Bins</li>
+                                <li>Hangers</li>
+                                <li>Organisers</li>
+                                <li>Hooks & Holders</li>
+                                <li>Laundry Bags</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">BEAUTY
+                <div class="mega-menu beauty-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h3>Makeup</h3>
+                            <ul>
+                                <li>Lipstick</li>
+                                <li>Lip Gloss</li>
+                                <li>Lip Liner</li>
+                                <li>Mascara</li>
+                                <li>Eyeliner</li>
+                                <li>Kajal</li>
+                                <li>Eyeshadow</li>
+                                <li>Foundation</li>
+                                <li>Primer</li>
+                                <li>Concealer</li>
+                                <li>Compact</li>
+                                <li>Nail Polish</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Skincare, Bath & Body</h3>
+                            <ul>
+                                <li>Face Moisturiser</li>
+                                <li>Cleanser</li>
+                                <li>Masks & Peel</li>
+                                <li>Sunscreen</li>
+                                <li>Serum</li>
+                                <li>Face Wash</li>
+                                <li>Eye Cream</li>
+                                <li>Lip Balm</li>
+                                <li>Body Lotion</li>
+                                <li>Body Wash</li>
+                                <li>Body Scrub</li>
+                                <li>Hand Cream</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Haircare</h3>
+                            <ul>
+                                <li>Shampoo</li>
+                                <li>Conditioner</li>
+                                <li>Hair Cream</li>
+                                <li>Hair Oil</li>
+                                <li>Hair Gel</li>
+                                <li>Hair Color</li>
+                                <li>Hair Serum</li>
+                                <li>Hair Accessory</li>
+                            </ul>
+                            <h3>Fragrances</h3>
+                            <ul>
+                                <li>Perfume</li>
+                                <li>Deodorant</li>
+                                <li>Body Mist</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Appliances</h3>
+                            <ul>
+                                <li>Hair Straightener</li>
+                                <li>Hair Dryer</li>
+                                <li>Epilator</li>
+                            </ul>
+                            <h3>Men's Grooming</h3>
+                            <ul>
+                                <li>Trimmers</li>
+                                <li>Beard Oil</li>
+                                <li>Hair Wax</li>
+                            </ul>
+                            <h3>Beauty Gift & Makeup Set</h3>
+                            <h3>Premium Beauty</h3>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Top Brands</h3>
+                            <ul>
+                                <li>Lakme</li>
+                                <li>Maybelline</li>
+                                <li>LOreal</li>
+                                <li>Philips</li>
+                                <li>Bath & Body Works</li>
+                                <li>THE BODY SHOP</li>
+                                <li>Biotique</li>
+                                <li>Mamaearth</li>
+                                <li>MCaffeine</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">GENZ
+                <div class="mega-menu genz-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h3>Trending</h3>
+                            <ul>
+                                <li>Oversized Tees</li>
+                                <li>Cargo Pants</li>
+                                <li>Baggy Jeans</li>
+                                <li>Co-ord Sets</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Footwear</h3>
+                            <ul>
+                                <li>Chunky Sneakers</li>
+                                <li>Platform Shoes</li>
+                                <li>Slides</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Accessories</h3>
+                            <ul>
+                                <li>Bucket Hats</li>
+                                <li>Caps</li>
+                                <li>Crossbody Bags</li>
+                                <li>Chain Necklaces</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Beauty</h3>
+                            <ul>
+                                <li>Glossy Makeup</li>
+                                <li>Skincare Routine</li>
+                                <li>Lip Liner</li>
+                                <li>Blush</li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Vibes</h3>
+                            <ul>
+                                <li>Campus Fit</li>
+                                <li>Y2K Style</li>
+                                <li>Streetwear</li>
+                                <li>Indie Aesthetic</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="nav-item">STUDIO</div>
+
+            <div class="search-wrap">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search for products, brands and more">
+            </div>
+        </div>
+
+        <div class="nav-icons">
+            <div class="nav-icon-btn">
+                <i class="fa-regular fa-user"></i>
+                <span>Profile</span>
+            </div>
+            <div class="nav-icon-btn">
+                <i class="fa-regular fa-heart"></i>
+                <span>Wishlist</span>
+            </div>
+            <div class="nav-icon-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Bag</span>
+            </div>
+        </div>
+    </nav>
+    
+    <img src="../assests/mynta1.webp" alt="" id="image"> 
+    <div id="class"> 
+        <img src="../assests/myntra2.webp" alt=""> 
+        <img src="../assests/myntra3.webp" alt=""> 
+    </div>
+    <h1 style="margin:50px;font-family: 'Assistant', sans-serif;">RISING STARS</h1>
+     <div id="p1">
+        <img class="ids" src="../assests/k1.jpeg" alt="">
+        <img class="ids" src="../assests/k2.jpeg" alt="">
+        <img class="ids" src="../assests/k3.jpeg" alt="">
+        <img class="ids" src="../assests/k4.jpeg" alt="">
+        <img class="ids" src="../assests/k5.jpeg" alt="">
+     </div>
+    <h1 style="margin:50px;font-family: 'Assistant', sans-serif;">LUXE GRAND REDUCTION DEALS</h1>
+    <div id="luxs">
+        <img class="ids"src="../assests/k7.jpeg" alt="">
+        <img class="ids"src="../assests/k6.jpeg" alt="">
+        <img class="ids"src="../assests/k8.jpeg" alt="">
+        <img class="ids" src="../assests/k9.jpeg" alt="">
+        <img class="ids"src="../assests/k10.jpeg" alt="">
+    </div>
+    <h1 style="margin:50px;font-family: 'Assistant', sans-serif;">MEDAL WORTHY BRANDS TO BAG</h1>
+    <div id="medals">
+    <img class="ids"src="../assests/k11.jpeg" alt="">
+     <img class="ids"src="../assests/k12.jpeg" alt="">
+     <img class="ids"src="../../assests/k7.jpeg" alt="">
+     <img class="ids"src="../assests/k5.jpeg" alt="">
+     <img class="ids"src="../assests/k3.jpeg" alt="">
+    </div>
+    <h1 style="margin:50px;font-family: 'Assistant', sans-serif;">GRAND GLOBAL BRANDS</h1>
+    <div id="globals">
+        <img class="ids" src="../assests/k1.jpeg" alt="">
+        <img class="ids" src="../assests/k2.jpeg" alt="">
+        <img class="ids" src="../assests/k4.jpeg" alt="">
+        <img class="ids" src="../assests/k8.jpeg" alt="">
+        <img class="ids" src="../assests/k7.jpeg" alt="">
+    </div>
+     <h1 style="margin:50px;font-family: 'Assistant', sans-serif;">SHOP BY CATEGORY</h1>
+     <div id="shop1">
+        <img class="shops" src="../assests/k7.jpeg" alt="">
+        <img class="shops" src="../assests/k4.jpeg" alt="">
+        <img class="ids"src="../assests/k7.jpeg" alt="">
+        <img class="ids"src="../assests/k6.jpeg" alt="">
+        <img class="ids"src="../assests/k8.jpeg" alt="">
+        <img class="ids" src="../assests/k9.jpeg" alt="">
+       <br><br><br>
+     </div>
+     <div id="shop2">
+         <img class="ids" src="../assests/k1.jpeg" alt="">
+        <img class="ids" src="../assests/k2.jpeg" alt="">
+        <img class="ids" src="../assests/k4.jpeg" alt="">
+        <img class="ids" src="../assests/k8.jpeg" alt="">
+        <img class="ids" src="../assests/k7.jpeg" alt="">
+        <br><br><br>
+     </div>
+     <div id="shop3">
+         <img class="ids"src="../assests/k7.jpeg" alt="">
+        <img class="ids"src="../assests/k6.jpeg" alt="">
+        <img class="ids"src="../assests/k8.jpeg" alt="">
+        <img class="ids" src="../assests/k9.jpeg" alt="">
+        <img class="ids"src="../assests/k10.jpeg" alt="">
+       <br><br><br>
+     </div>
+     <div id="shop4">
+         <img class="ids"src="../assests/k11.jpeg" alt="">
+     <img class="ids"src="../assests/k12.jpeg" alt="">
+     <img class="ids"src="../../assests/k7.jpeg" alt="">
+     <img class="ids"src="../assests/k5.jpeg" alt="">
+     <img class="ids"src="../assests/k3.jpeg" alt="">
+      <img class="ids"src="../assests/k7.jpeg" alt="">
+        <br><br><br>
+     </div>
+     <div id="shop5">
+        <img class="shops" src="../assests/k7.jpeg" alt="">
+        <img class="shops" src="../assests/k4.jpeg" alt="">
+        <img class="ids"src="../assests/k7.jpeg" alt="">
+        <img class="ids"src="../assests/k6.jpeg" alt="">
+        <img class="ids"src="../assests/k8.jpeg" alt="">
+        <img class="ids" src="../assests/k9.jpeg" alt="">
+         <br><br><br>
+     </div>
+     <div id="sh6">
+         <img class="ids"src="../assests/k7.jpeg" alt="">
+        <img class="ids"src="../assests/k6.jpeg" alt="">
+        <img class="ids"src="../assests/k8.jpeg" alt="">
+       
+     </div>
+     <div id="paracontainer">
+      <div id="box1">
+        <h5>ONLINE SHOPPING</h5>
+        <ul type="none">
+          <li>Men</li>
+          <li>Women</li>
+          <li>Kids</li>
+          <li>Beauty</li>
+          <li>Genz</li>
+          <li>Gift Cards</li>
+          <li>Myntra Insider</li>
+        </ul>
+        <h5>USEFUL LINKS</h5>
+        <ul type="none">
+          <li>Blog</li>
+          <li>Careers</li>
+          <li>Site Map</li>
+          <li>Corporate Information</li>
+          <li>whitehat</li>
+          <li>Cleartrip</li>
+          <li>Myntra Global</li>
+        </ul>
+      </div>
+      <div id="box2">
+        <h5>CUSTOMER POLICIES</h5>
+        <ul type="none">
+          <li>Contact Us</li>
+          <li>FAQ</li>
+          <li>Terms Of Use</li>
+          <li>Track Orders</li>
+          <li>Shipping</li>
+          <li>Cancellation</li>
+          <li>Privacy policy</li>
+          <li>Grievance Redresal</li>
+          <li>FSSAI Food Safety</li>
+          <li>Connect app</li>
+        </ul>
+      </div>
+<div id="box3">
+        <h5>EXPERIENCE MYNTRA APP ON MOBILE</h5>
+        <div id="apps">
+          <img
+            style="height: 40px; width: 140px"
+            src="../assests/as1.jpeg"
+            alt=""
+          />
+          <img
+            style="height: 40px; width: 140px"
+            src="../assests/as2.jpeg"
+            alt=""
+          />
+        </div>
+        <br />
+        <h5>KEEP IN TOUCH</h5>
+        <br />
+        <div id="social">
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-square-twitter"></i>
+          <i class="fa-brands fa-square-youtube"></i>
+          <i class="fa-brands fa-square-instagram"></i>
+        </div>
+      </div>
+      <div id="box4">
+        <div id="apps1">
+          <img
+            style="height: 50px; width: 50px"
+            src="../assests/o1.jpeg"
+            alt=""
+          />
+          <h4>100%</h4>
+          <p>ORIGINAL guarantee for all products at mythra.com</p>
+        </div>
+        <div id="apps1">
+          <img
+            style="height: 50px; width: 50px"
+            src="../Assets/return.jpeg"
+            alt=""
+          />
+          <h4>
+            Return of 14 days
+            <p>of</p>
+          </h4>
+          <p>recieving your order</p>
+        </div>
+      </div>
+    </div>
+    <div id="paracontainer2">
+      <h4>POPULAR SEARCHES</h4>
+      <p>
+        Makeup | Dresses For Girls T-Shirts Sandals Headphones Babydolls Blazers
+        For Men Handbags Ladies Watches Bags Sport Shoes Reebok Shoes Puma Shoes
+        Boxers Wallets Tops Earrings Fastrack Watches Kurtis Nike Smart Watches
+        Titan Watches Designer Blouse Gowns Rings Cricket Shoes Forever 21 Eye
+        Makeup Photo Frames Punjabi Suits Bikini Myntra Fashion Show Lipstick
+        Saree Watches Dresses Lehenga Nike Shoes Goggles Bras Suit Chinos Shoes
+        Adidas Shoes Woodland Shoes Jewellery Designers Sarees
+      </p>
+    </div>
+    <div id="paraco">
+      <h4>ONLINE SHOPPING MADE EASY AT MYTHRA</h4>
+      <p>
+        If you would like to experience the best of online shopping for men,
+        women and kids in India, you are at the right place. Myntra is the
+        ultimate destination for fashion and lifestyle, being host to a wide
+        array of merchandise including clothing, footwear, accessories,
+        jewellery, personal care products and more. It is time to redefine your
+        style statement with our treasure-trove of trendy items. Our online
+        store brings you the latest in designer products straight out of fashion
+        houses. You can shop online at Myntra from the comfort of your home and
+        get your favourites delivered right to your doorstep.
+      </p>
+      <h4>BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION</h4>
+      <p>
+        Be it clothing, footwear or accessories, Myntra offers you the ideal
+        combination of fashion and functionality for men, women and kids. You
+        will realise that the sky is the limit when it comes to the types of
+        outfits that you can purchase for different occasions.
+      </p>
+      <h4>1.smart men's clothing</h4>
+      <p>
+        - At Myntra you will find myriad options in smart formal shirts and
+        trousers, cool T-shirts and jeans, or kurta and pyjama combinations for
+        men. Wear your attitude with printed T-shirts. Create the back-to-campus
+        vibe with varsity T-shirts and distressed jeans. Be it gingham, buffalo,
+        or window-pane style, checked shirts are unbeatably smart. Team them up
+        with chinos, cuffed jeans or cropped trousers for a smart casual look.
+        Opt for a stylish layered look with biker jackets. Head out in cloudy
+        weather with courage in water-resistant jackets. Browse through our
+        innerwear section to find supportive garments which would keep you
+        confident in any outfit.
+      </p>
+      <h4>2.Trendy women’s clothing</h4>
+      <p>
+        Online shopping for women at Myntra is a mood-elevating experience. Look
+        hip and stay comfortable with chinos and printed shorts this summer.
+        Look hot on your date dressed in a little black dress, or opt for red
+        dresses for a sassy vibe. Striped dresses and T-shirts represent the
+        classic spirit of nautical fashion. Choose your favourites from among
+        Bardot, off-shoulder, shirt-style, blouson, embroidered and peplum tops,
+        to name a few. Team them up with skinny-fit jeans, skirts or palazzos.
+        Kurtis and jeans make the perfect fusion-wear combination for the cool
+        urbanite. Our grand sarees and lehenga-choli selections are perfect to
+        make an impression at big social events such as weddings. Our
+        salwar-kameez sets, kurtas and Patiala suits make comfortable options
+        for regular wear.
+      </p>
+      <h4>Fashionable footwear</h4>
+      <p>While clothes maketh the man, the type of footwear you wear reflects your personality. We bring you an exhaustive lineup of options in casual shoes for men, such as sneakers and loafers. Make a power statement at work dressed in brogues and oxfords. Practice for your marathon with running shoes for men and women. Choose shoes for individual games such as tennis, football, basketball, and the like. Or step into the casual style and comfort offered by sandals, sliders, and flip-flops. Explore our lineup of fashionable footwear for ladies, including pumps, heeled boots, wedge-heels, and pencil-heels. Or enjoy the best of comfort and style with embellished and metallic flats.</p>
+   <h4>Stylish accessories</h4>
+   <p>Myntra is one of the best online shopping sites for classy accessories that perfectly complement your outfits. You can select smart analogue or digital watches and match them up with belts and ties. Pick up spacious bags, backpacks, and wallets to store your essentials in style. Whether you prefer minimal jewellery or grand and sparkling pieces, our online jewellery collection offers you many impressive options</p>
+   
+    </div>
+</body>
+</html>

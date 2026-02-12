@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  /* p::first-line{ 
+    background-color: blue; 
+     color: black; 
+
+  }  */
+    /* p::first-letter{
+        background-color: yellowgreen;
+        color: black;
+        font-size:40px;
+    } */
+     /* p::selection{
+        background-color: black;
+        color: brown; 
+     } */
+
+      /* #content{
+        user-select: none;
+      } ---this is used for nobody can copy the content */
+       li::marker{
+           color: red;
+           font-size: 20px;
+       }
+       li::before{
+        content: "frontend";
+        color: brown;
+        background-color: black;
+        font-size: 14px;
+       }
+      li::after{
+        content: 👉;
+        content: "completed"; 
+        color:blueviolet;
+        background-color: black;
+       }
+       input::placeholder{
+        color: palevioletred;
+        background-color: aquamarine;
+        font-size: 14px;
+        padding-left: 30px;
+       }
