@@ -14,34 +14,46 @@
             background-color: cadetblue;
         }
         #container{
-            height:700px;
-            width:800px;
+            height:300px;
+            width:300px;
             color: black;
-            margin: 300px auto;
+            margin: 200px auto;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
         }
-#box1{
-height: 50px;
-width:400px;
-background-color: black;
-margin-left: 600px;
-margin-top: 400px;
-align-self: center;
-}
-#box2{
-height: 50px;
-width:400px;
-background-color: black;
-margin-left: 600px;
-margin-top: 500px;
-align-self: center;
-}
-    </style>
+        .line{
+            height: 40px;
+            width: 300px;
+            background-color: white;
+            border-radius: 20px;
+        }
+        #container:hover{
+            .line1{
+                position: relative;
+                top:40px;
+                transform: rotate(400deg);
+                transition-duration: 3s;
+            }
+            .line2{
+                display: none;
+            }
+            .line3{
+                position: relative;
+                background-color: red;
+                top: -76px;
+                transform: rotate(-400deg);
+                transition-duration: 3s;
+            }
+        }
+</style>
 </head>
 <body>
     <div id="container">
-        <div id="box1"></div>
-        <div id="box2"></div>
-        <div id="box3"></div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
     </div>
 </body>
 </html>
