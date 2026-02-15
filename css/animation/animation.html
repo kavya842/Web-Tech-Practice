@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #box{
+            height:200px;
+            width: 200px;
+            background-color: black;
+            margin-left: 350px;
+            margin-top: 150px;
+            animation-name: slider;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            /* animation-fill-mode: forwards; */
+            animation-fill-mode: backwards;
+            /* animation-delay: 2s; */
+            animation-iteration-count: infinite;
+            /* animation-direction: reverse; */
+            /* animation-direction: alternate; */
+            /* animation-direction: alternate-reverse; */
+            border-radius: 50%;
+        }
+        @keyframes slider{
+            /* from{
+                margin-left: 0px;
+                margin-top: 0;
+            }
+            to{
+                margin-left: 900px;
+                margin-top: 500px;
+                background-color: red;
+            } */
+             0%{
+                margin-left: 0px;
+                margin-top: 0px;
+                background-color: yellow;
+             }
+             25%{
+                margin-left: 600px;
+                margin-top: 0px;
+                background-color: red;
+             }
+             50%{
+                margin-left: 600px;
+                margin-top: 600px;
+                background-color: blue;
+             }
+             75%{
+                margin-left:0px ;
+                margin-top: 600px;
+                background-color: green;
+             }
+             100%{
+                margin-left: 0px;
+                margin-top: 0px;
+                background-color: palevioletred;
+             }
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

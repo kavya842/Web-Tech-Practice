@@ -1,66 +1,359 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        nav{
-            height:60px;
-            width: 100vw;
-            background-color: aliceblue;
-            display: flex;
-            justify-content: space-evenly;
-        }
-        a{
-            justify-content: space-evenly;
-            text-decoration: none;
-            align-items: center;
-            
-        }
-        #container{
-            height: 700px;
-            width: 100vw;
-            /* border: 2px solid black; */
-            display: flex;
-            border-radius: 20px;
+<meta charset="UTF-8">
+<title>Flashcard UI</title>
 
-        
-        #part1{
-            height:700px;
-            width:50vw;
-            display: flex;
-            justify-content: space-evenly;
-            border:2px solid black;
-            margin-left: 200px;
-            /* margin-left: 50px; *//
-            border-radius: 20px;
-            
-        }
-        #part2{
-            height: 700px;
-            width: 20vw;
-            border: 2px solid black;
-            display: flex;
-            justify-content: space-evenly;
-            border-radius: 20px;
-        }
-    }
-    </style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background: white;
+  padding:40px;
+}
+.top-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.heading{
+  font-size:22px;
+  font-weight:700;
+}
+
+.heading i{
+  margin-right:8px;
+}
+
+.toggle{
+  display:flex;
+  border:2px solid #3d2f1f;
+  border-radius:25px;
+  overflow:hidden;
+}
+
+.toggle button{
+  padding:8px 20px;
+  border:none;
+  background:white;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.toggle .active{
+  background:#f3c24f;
+}
+.main{
+  display:flex;
+  gap:25px;
+  /* background-color: #2b1d12; */
+  width:90%;
+}
+.left-box{
+  flex:3;
+  border:2px solid black;
+  border-radius:18px;
+  padding:20px;
+}
+.filters{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.filters-left{
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+
+select{
+  padding:6px 15px;
+  border-radius:20px;
+  border:2px solid #3d2f1f;
+  background:white;
+}
+
+.shuffle{
+  padding:6px 15px;
+  border-radius:20px;
+  border:2px solid #3d2f1f;
+  background:white;
+  cursor:pointer;
+}
+.card{
+  height:320px;
+  border-radius:20px;
+  border:3px solid #3d2f1f;
+  background:linear-gradient(135deg,#e067c6,#f47bb4);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#2b1d12;
+  position:relative;
+}
+
+.card h1{
+  font-size:34px;
+  font-weight:800;
+}
+
+.card p{
+  margin-top:10px;
+  font-size:14px;
+}
+
+.star{
+  position:absolute;
+  top:15px;
+  right:20px;
+  color:white;
+}
+
+.sparkle{
+  position:absolute;
+  bottom:70px;
+  left:25px;
+  color:yellow;
+}
+
+.progress{
+  position:absolute;
+  bottom:20px;
+  text-align:center;
+}
+
+.bar{
+  width:80px;
+  height:6px;
+  background:white;
+  border-radius:10px;
+  margin:auto;
+  margin-bottom:5px;
+}
+.action-buttons{
+  display:flex;
+  gap:15px;
+  margin-top:20px;
+}
+
+.know{
+  background:#f3c24f;
+  padding:10px 20px;
+  border-radius:25px;
+  border:none;
+  font-weight:600;
+  margin-left: 260px;
+  border: 2px solid black;
+}
+
+.reset{
+  padding:10px 20px;
+  border-radius:25px;
+  border:2px solid #3d2f1f;
+  background:white;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:20px;
+}
+.right-box{
+  flex:1;
+  background:#f3efeb;
+  border:2px solid black;
+  border-radius:18px;
+  padding:20px;
+  justify-content: space-evenly;
+  align-items: center;
+  display: block;
+}
+
+.stats-title{
+  font-size:23px;
+  font-weight:500;
+  margin-bottom:18px;
+}
+
+.stat{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+  border:2px solid black;
+  border-radius:15px;
+  overflow:hidden;
+}
+
+.stat-left{
+  padding:15px;
+  background:white;
+  width:65%;
+}
+
+.stat-left span{
+  font-size:24px;
+  font-weight:800;
+}
+
+.stat-right{
+  width:35%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size:22px;
+}
+#pre{
+    height: 50px;
+    width: 150px;
+    background-color: white;
+    border-radius: 30px;
+    margin-top: -9px;
+}
+.active{
+    border-radius: 20px;
+    border: 2px solid white;
+}
+.toggle{
+    background-color: white;
+    margin-right: 350px;
+}
+#mat{
+    height: 28px;
+    width: 180px;
+    background-color: white;
+    margin-top: -95px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.blue{ background:#98aee6; }
+.green{ background:#5fd0b9; }
+.pink{ background:#f07ca5; }
+.purple{ background:#e481c6; }
+
+</style>
 </head>
+
 <body>
-    <nav>
-        <div><a href="">flashcard</a></div>
-        <div><a href="">study mode</a></div>
-        <div><a href="">all cards</a></div> </nav>
-    <div id="container">
-        <div id="part1">part1</div>
-        <div id="part2">part2</div>
+
+<div class="top-header">
+<div class="heading">
+<i class="fa-solid fa-book" style="margin-left: 160px;"></i><strong > Flashcard</strong>
+</div>
+
+<div class="toggle" >
+<button class="active">Study Mode</button>
+<button>All Cards</button>
+</div>
+</div>
+
+<div class="main" style="width: 1150px; margin-left: 150px;">
+<div class="left-box" style="background-color: white; height: 550px; width: 600px;">
+<div class="filters">
+<div class="filters-left">
+        <select>
+          <option>All Categories</option>
+        </select>
+        <label><input type="checkbox"> Hide Mastered</label>
+      </div>
+      <button class="shuffle">
+        <i class="fa-solid fa-shuffle"></i> Shuffle
+      </button>
     </div>
+<hr style="margin-top:20px ;margin-right: 10%; margin-bottom: 20px; width: 105%; position: relative; right: 20px;">
+
+    <div class="card" style="background-color: white; height: 300px;">       
+<div id="mat"><emp>Web Development</emp></div>
+      <i class="fa-solid fa-star star"></i>
+      <i class="fa-solid fa-sparkles sparkle"></i>
+<br> <br> <br> <br>
+      <h1>What does HTML stand for?</h1>
+      <p>Click to reveal answer</p>
+
+      <div class="progress">
+        <div class="bar"></div>
+        <small>0/5</small>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button class="know">
+        <i class="fa-regular fa-circle-check"></i> I Know This
+      </button>
+      <button class="reset">
+        <i class="fa-solid fa-rotate-left"></i> Reset Progress
+      </button>
+    </div>
+      <hr style="margin-top: 10px; position: relative; width: 105%; right: 20px; "> 
+
+    <div class="nav">
+      <button id="pre"><i class="fa-solid fa-chevron-left"></i> Previous</button>
+      <span>Card 1 of 40</span>
+      <button id="pre"> Next <i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+  </div>
+
+  <div class="right-box" style="background-color: white;">
+    <div class="stats-title">Study Statistics</div>
+
+    <div class="stat">
+    <div class="stat-left">
+    Total Cards<br><span>40</span>
+    </div>
+    <div class="stat-right blue" style="height: 83px; width:120px ;">
+    <i class="fa-solid fa-layer-group"></i>
+    </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-left">
+        Mastered<br><span>11</span>
+      </div>
+      <div class="stat-right green" style="height: 83px; width:120px ;">
+        <i class="fa-solid fa-brain"></i>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-left">
+        In Progress<br><span>21</span>
+      </div>
+      <div class="stat-right pink" style="height: 83px; width:120px ;">
+        <i class="fa-solid fa-book-open"></i>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-left">
+        Not Started<br><span>8</span>
+      </div>
+      <div class="stat-right purple" style="height: 83px; width:120px ;">
+        <i class="fa-solid fa-box"></i>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
 </body>
 </html>
