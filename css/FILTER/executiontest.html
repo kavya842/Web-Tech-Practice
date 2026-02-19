@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+     *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    #container{
+            /* height:100vh; */
+            width:90vw;
+            display: flex;
+            justify-content: space-evenly;
+        }
+   
+          nav{
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 50px;
+    background:white;
+}
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+#mlogo{
+    height:40px;
+    width:100px;
+    cursor:pointer;
+}
+.nav-left a{
+    text-decoration:none;
+    color:black;
+    font-size:14px;
+    position:relative;
+    padding-bottom:5px;
+}
+
+.nav-left a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:2px;
+    background:black;
+    transition:0.3s;
+}
+.nav-left a:hover::after{
+    width:100%;
+}
+.nav-right{
+    display:flex;
+    gap:18px;
+    font-size:15px;
+    cursor:pointer;
+    margin-left: 100px;
+    
+}
+ #part1{
+            height:100px; 
+             width:50px;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: 800px;
+            display: flex;
+            padding: 20px;
+            text-align: center;
+        } 
+        #part2{
+            height:300px;
+            width:50px;
+            background-color: white;
+            gap:10px;
+            display: flex;
+        } 
+        #mc{
+            margin-left: 700px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-left">
+            <img src="../assests/microsoft logo.png" id="mlogo">
+
+            <a href="#">Microsoft 365</a>
+            <a href="#">Teams</a>
+            <a href="#">Copilot</a>
+            <a href="#">Windows</a>
+            <a href="#">Surface</a>
+            <a href="#">Xbox</a>
+            <a href="#">Support</a>
+        </div>
+
+        
+        <div class="nav-right">
+            <i class="fa-solid fa-magnifying-glass"><h5>Search</h5></i>
+            <i class="fa-solid fa-cart-shopping"><h5>Cart</h5></i>
+            <i class="fa-regular fa-user"><h5>Signin</h5></i>
+        </div>
+    </nav>
+</header>
+
+        <img src="../assests/microsoft.avif" alt="" >
+    </div>
+   
+    <div id="part1">
+    <h1>||</h1>
+    
+    <h1> < </h1>
+    
+    <h1> o </h1>
+    
+    <h1> > </h1>
+
+    </div>
+    <div id="mc">
+    <i class="fa-brands fa-microsoft"><a href="#">Choose your microsoft 365</a></i>
+    <i class="fa-brands fa-xbox"><a href="#">Shop X Box</a></i>
+    <i class="fa-brands fa-microsoft"><a href="">Get Microsoft 11</a></i>
+    <a href="#">explore surface devices</a>
+</div>
+   
+    <div id="part2">+
+        <img src="../assests/m1.jpg" alt="">
+    <img src="../assests/m2.jpg" alt="">
+    <img src="../assests/m3.jpg" alt="">
+    <img src="../assests/m4.jpg" alt=""></div>
+</body>
+</html>

@@ -1,1 +1,12 @@
 This repository showcases my consistent daily coding practice in Web Technologies. I have successfully completed HTML and am actively working on CSS. The code is regularly pushed to GitHub as part of my learning journey to strengthen frontend development fundamentals and hands-on implementation skills. 
+This repository is created to:
+
+Practice Web Development daily
+
+Track my learning progress
+
+Build strong frontend fundamentals
+
+Create mini projects and UI clones
+
+Prepare for internships and developer roles
