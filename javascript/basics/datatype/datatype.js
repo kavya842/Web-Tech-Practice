@@ -40,3 +40,6 @@
     console.log(b);  // o/p:-20
     console.log(c);  // o/p:-30
 }
+console.log(a);  // o/p:-10
+console.log(b);  // o/p:-ReferenceError: b is not defined
+console.log(c);  // o/p:-ReferenceError: c is not defined    
