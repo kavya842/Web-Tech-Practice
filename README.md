@@ -1,4 +1,5 @@
 Web Technologies Practice Repository
+
 -----------Overview-------------
 
 This repository reflects my structured and consistent practice in Web Technologies. It documents my hands-on learning journey in frontend development, covering core concepts and practical implementation using HTML, CSS, and JavaScript.
