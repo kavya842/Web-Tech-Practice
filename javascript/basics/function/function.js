@@ -43,14 +43,34 @@
 
 //! 4) Immediate invoke function expression (IIFE) !//
 //! when we want to call a function immediately after its declaration then we use IIFE !//
-// (function(){
+//! it is also called self invoking function !//
+//! it is used to create a new scope for variables !//
+//! it is used to avoid polluting the global scope !//
+//! it is used to create a private scope for variables !//
+//! it is used to create a closure !//
+//! it is used to create a module pattern !//
+//! it is used to create a singleton pattern !//
+//! it is used to create a namespace !//
+//! it is used to create a function that is not accessible from outside the function !//
+// (function(){    ex-1
 //     console.log("I am an IIFE function")
+//     alert("I am an IIFE function")
 // })
 // ();
-// (function(a,b){
+
+// (function(a,b){    ex-2
 //     console.log(a+b)
+//     alert('using the IIFE function')
 // })
-// (2,3)
+// (2,3);
+
+// (function(a,b){   ex-3
+//     console.log(a*b)
+//     alert('using  IIFE function')
+// })
+// (2,3);           
+
+
 //! 5) Arrow function !//
 //! it is a short hand way to write a function !//
 //! it is introduced in ES6 !//
