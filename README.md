@@ -7,11 +7,11 @@ I have successfully completed HTML and CSS and am currently learning JavaScript 
 
 Technologies
 
-HTML5
+1) HTML5
 
-CSS3
+2) CSS3
 
-JavaScript (Currently Learning)
+3) JavaScript (Currently Learning)
 
 Purpose
 
