@@ -105,6 +105,20 @@
 // let a=(b,c,d) => console.log(b+c+d);
 // a(2,3,5)
 
+//! 6) Recursive function !//
+//! it is a function that calls itself !//
+//! it is used to solve problems that can be broken down into smaller subproblems !//
+//! it is used to solve problems that can be solved using divide and conquer approach !//
+//! it is used to solve problems that can be solved using dynamic programming approach !//
+//! it is used to solve problems that can be solved using backtracking approach !//
+//! it is used to solve problems that can be solved using memoization approach !//
+//! it is used to solve problems that can be solved using tabulation approach !//
+//! factorial of a number using recursion !//
+function info(){
+    console.log('i am recursive ');
+    info();   
+}
+info();
 
 
 
