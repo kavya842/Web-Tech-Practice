@@ -84,5 +84,28 @@
 //! it is not suitable for functions that use super keyword !//
 //! it is not suitable for functions that use new.target keyword !//
 //! it is not suitable for functions that use this keyword !//
+// let a=(b,c) => console.log(b+c);
+// a(2,3)    //! one line of logic remove the curly braces and return keyword !//
+
+// let a=(b,c) => {
+//     let sum=b+c;
+//     console.log(sum)
+// }
+// a(2,3)  //! more than one line of logic we have to use curly braces and return keyword !//
+
+//!---when we have only one parameter we can remove the parentheses !//
+// let a=b => console.log(b*2);
+// a(5)
+
+//! when we have no parameter we have to use empty parentheses !//
+// let a=() => console.log("I am an arrow function")
+// a()
+
+//! when we have more than one parameter we have to use parentheses !//
+// let a=(b,c,d) => console.log(b+c+d);
+// a(2,3,5)
+
+
+
 
 
