@@ -1,4 +1,5 @@
 //! 1) Named function!//
+//! named function is a normal function !// 
 //! parametrised function !//
 // function add(y,z){
 //     let x=y+z
@@ -114,11 +115,72 @@
 //! it is used to solve problems that can be solved using memoization approach !//
 //! it is used to solve problems that can be solved using tabulation approach !//
 //! factorial of a number using recursion !//
-function info(){
-    console.log('i am recursive ');
-    info();   
+// function info(){
+//     console.log('i am recursive ');
+//     info();   
+// }
+// info(); 
+
+//! 10 times function call should happen !//
+// let i=1
+// function info(){
+//     while(i<11){
+//     console.log("I am recursive",i);
+//     i++;
+//     info();
+
+//     }
+// }
+// info();
+//! GEC GLOBAL EXECUTION CONTEXT !//
+// console.log('start execution')
+// var a=50;
+// let b=60;
+// const c=70;
+// function info(){
+//     let x=10;
+//     var y=20;
+//     let z=x+y;
+//     console.log(z);   
+// }
+// info();
+
+//!-------------------- Nested Function-------------- !//
+//! A function within another function is called as nested function !//
+// function bank(){
+//     let saving=2000;
+//     function fd(){
+//         let fd_balance=30000;
+//         function total(){
+//             let total_balance=saving+fd_balance;
+//             console.log(total_balance);
+            
+//         }
+//         total();
+//     }
+//     fd();
+// }
+// bank();
+
+//! JS Currying !//
+//! calling or invoking the child function using multiple parenthesis along with parent function is called as js currying !//
+function bank(a){
+   console.log("first");
+    let saving=2000;
+    function fd(b){
+    console.log("second")
+        let fd_balance=30000;
+        function total(c){
+            console.log("third")
+            let total_balance=saving+fd_balance+c;
+            console.log(total_balance);
+            
+        }
+       return total;
+    }
+    return fd;
 }
-info();
+bank(2000)(30000)(500);
 
 
 
