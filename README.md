@@ -1,12 +1,61 @@
-This repository showcases my consistent daily coding practice in Web Technologies. I have successfully completed HTML and am actively working on CSS. The code is regularly pushed to GitHub as part of my learning journey to strengthen frontend development fundamentals and hands-on implementation skills. 
+Web Technologies Practice Repository
+
+-----------Overview-------------
+
+This repository reflects my structured and consistent practice in Web Technologies. It documents my hands-on learning journey in frontend development, covering core concepts and practical implementation using HTML, CSS, and JavaScript.
+
+I have successfully completed HTML and CSS and am currently learning JavaScript to build interactive and dynamic web applications. All work is regularly committed to GitHub to track progress and maintain consistency in learning.
+
+Technologies
+
+1) HTML5
+
+2) CSS3
+
+3) JavaScript (Currently Learning)
+
+----------Purpose-------------
+
 This repository is created to:
 
-Practice Web Development daily
+* Strengthen frontend development fundamentals
 
-Track my learning progress
+* Apply theoretical concepts through practical coding
 
-Build strong frontend fundamentals
+* Build responsive and structured web layouts
 
-Create mini projects and UI clones
+* Develop interactive web features using JavaScript
 
-Prepare for internships and developer roles
+* Track daily learning progress
+
+* Prepare for internships and entry-level developer roles
+
+* Learning Focus
+
+* Current focus areas include:
+
+* JavaScript fundamentals
+
+* Functions and scope
+
+* Arrays and objects
+
+* DOM manipulation
+
+* Event handling
+
+* Building small interactive projects
+
+------Approach---------
+
+* Daily coding practice
+
+* Clean and readable code structure
+
+* Incremental learning from basics to advanced topics
+
+* Implementation through mini projects and UI-based exercises
+
+--------------About------------
+
+I am an Information Technology student focused on developing strong frontend skills and building a solid foundation in web development. This repository demonstrates my consistency, practical learning approach, and commitment to continuous improvement.
