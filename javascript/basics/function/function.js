@@ -164,23 +164,74 @@
 
 //! JS Currying !//
 //! calling or invoking the child function using multiple parenthesis along with parent function is called as js currying !//
-function bank(a){
-   console.log("first");
-    let saving=2000;
-    function fd(b){
-    console.log("second")
-        let fd_balance=30000;
-        function total(c){
-            console.log("third")
-            let total_balance=saving+fd_balance+c;
-            console.log(total_balance);
+// function bank(a){
+//    console.log("first");
+//     let saving=2000;
+//     function fd(b){
+//     console.log("second")
+//         let fd_balance=30000;
+//         function total(c){
+//             console.log("third")
+//             let total_balance=saving+fd_balance+c;
+//             console.log(total_balance);
             
-        }
-       return total;
-    }
-    return fd;
-}
-bank(2000)(30000)(500);
+//         }
+//        return total;
+//     }
+//     return fd;
+// }
+// bank(2000)(30000)(500);
+
+//! higher order function !//
+// function perimeter(p){
+//     return 4*p;
+// }
+// function area(a){
+//     return a*a;
+// }
+// function square(a,b){
+//     return b(a)
+// }
+// console.log(square(4,perimeter));
+// console.log(square(3,area));
+
+//! example 2 !//
+// function hof(a,b,c){
+//     let d=a+b;
+//     return c(d);
+// }
+// function cb(a){
+//     console.log(a);
+// }
+// hof(10,12,cb)
+
+//! first order function !//
+// function info(a,b){
+//     return a+b;
+// }
+// info(10,12);
+
+//! Generator Function !//
+// function * p(){
+//     yield 101;
+//     yield 102;
+//     yield 103;
+// }
+// let pid=p();
+// console.log("bag",pid.next().value);
+// console.log("pen",pid.next().value);
+// console.log("watch",pid.next().value);
+//! write a program to find factorial of a number using recursive function !//
+
+
+//! write  a program to generate the id from 101 to 3000 using generator !//
+
+//! write a program to swap 2 numbers using third variable !//
+
+//! write a program to swap 2 number without using third variable !//
+
+
+
 
 
 
