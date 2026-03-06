@@ -222,13 +222,45 @@
 // console.log("pen",pid.next().value);
 // console.log("watch",pid.next().value);
 //! write a program to find factorial of a number using recursive function !//
-
-
+// i=0
+// function fact(n){
+//     if (n==0){
+//         return 1;
+//     }
+//     else{
+//         return n*fact(n-1);
+//     }  
+// }
+// let factorial=fact(5);
+// console.log(factorial);
 //! write  a program to generate the id from 101 to 3000 using generator !//
-
+// let i=102;
+// function * p(){
+//     while(i<3000){
+//         yield i++;
+//     }
+// }
+// let pid=p();
+// console.log('pen',pid.next().value);
+// console.log('watch',pid.next().value);
 //! write a program to swap 2 numbers using third variable !//
-
+// let a=10;
+// let b=20;
+// let c;
+// c=a;
+// a=b;
+// b=c;
+// console.log(a);
+// console.log(b);
 //! write a program to swap 2 number without using third variable !//
+// let a=10;
+// let b=20;
+// a=a+b;
+// b=a-b;
+// a=a-b;
+// console.log(a);
+// console.log(b);
+
 
 
 
