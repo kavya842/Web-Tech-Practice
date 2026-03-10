@@ -153,7 +153,25 @@
 // console.log(arr);    // will mutate original array
 
 //! 20) fill method
-let arr=["html","css","js","react js"]
+// let arr=["html","css","js","react js"]
+// arr.fill("java",0,3)
+// console.log(arr);
+
+//! 21) Array.from method
+// let str="jspiders"
+// let arr=Array.from(str)
+// console.log(arr);
+
+//! 22) toString method
+// let arr=["html","css","js"]
+// let arr1=arr.toString();
+// console.log(arr1);
+// console.log(arr);
+
+//! Assignment 
+// let arr=[2,null,"hello",true,4,false,,undefined,7]
+// o/p:- [2,4,7]
+
 
 
 
