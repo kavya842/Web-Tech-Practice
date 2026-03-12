@@ -64,7 +64,7 @@
 // student.skill.forEach((v)=>{
 //     console.log(v)
 // })
-
+//! example 
 let student=[{
     name:"kavya",
     skill:["html","css","js"]
@@ -75,8 +75,8 @@ let student=[{
     name:"ravi",
     skill:["manual testing","java"]
 }]
-student.map((s) => {
-    s.skill.map((v) => {
+student.map((k) => {
+    k.skill.map((v) => {
         console.log(v);
     });
 });
