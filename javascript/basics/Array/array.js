@@ -169,8 +169,14 @@
 // console.log(arr);
 
 //! Assignment 
-// let arr=[2,null,"hello",true,4,false,,undefined,7]
+let arr=[2,null,"hello",true,4,false,,undefined,7]
 // o/p:- [2,4,7]
+let arr1=arr.filter((v)=>{
+    return typeof v=='number'
+}
+)
+console.log(arr1);
+
 
 
 
