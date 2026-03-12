@@ -84,24 +84,88 @@
 // });
 
 //! example
+// let user={
+//     student:[
+//         {
+//             name:"kavya",
+//             skill:["html","css","js"]
+//         },
+//         {
+//             name:"mani",
+//             skill:["python","n8n","sql"]
+//         },{
+//             name:"sailaja",
+//             skill:["manual testing","java"]
+//         }
+//     ]
+// }
+// user.student.map((k)=>{
+//     k.skill.map((v)=>
+//     {
+//         console.log(v)
+//     })
+// })
+//! example
+// let user={
+//     student:[
+//         {
+//             name:"kavya",
+//             skill:["html","css","js"],
+//             mock:{
+//                 tech:1,
+//                 comm:2
+//             }
+//         },
+//         {
+//             name:"mani",
+//             skill:["python","n8n","sql"],
+//             mock:{
+//                 tech:2,
+//                 comm:2
+//             }
+//         },{
+//             name:"sailaja",
+//             skill:["manual testing","java"],
+//             mock:{
+//                 tech:3,
+//                 comm:2
+//             }
+//         }
+//     ]
+// }
+// user.student.map((v)=>{
+//     console.log(v.mock.tech)
+// })
+//! example 
 let user={
     student:[
         {
             name:"kavya",
-            skill:["html","css","js"]
+            skill:["html","css","js"],
+            mock:[{
+                tech:1,
+                comm:2
+            }]
         },
         {
             name:"mani",
-            skill:["python","n8n","sql"]
+            skill:["python","n8n","sql"],
+            mock:[{
+                tech:2,
+                comm:2
+            }]
         },{
             name:"sailaja",
-            skill:["manual testing","java"]
+            skill:["manual testing","java"],
+            mock:[{
+                tech:3,
+                comm:2
+            }]
         }
     ]
 }
-user.student.map((k)=>{
-    k.skill.map((v)=>
-    {
-        console.log(v)
+user.student.map((v)=>{
+     v.mock.map((k)=>{
+        console.log(k.tech)
+     })
     })
-})
