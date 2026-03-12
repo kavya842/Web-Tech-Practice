@@ -64,3 +64,19 @@
 // student.skill.forEach((v)=>{
 //     console.log(v)
 // })
+
+let student=[{
+    name:"kavya",
+    skill:["html","css","js"]
+},{
+    name:"mani",
+    skill:["python","sql"]
+},{
+    name:"ravi",
+    skill:["manual testing","java"]
+}]
+student.map((s) => {
+    s.skill.map((v) => {
+        console.log(v);
+    });
+});
