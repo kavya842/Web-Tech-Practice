@@ -65,18 +65,43 @@
 //     console.log(v)
 // })
 //! example 
-let student=[{
-    name:"kavya",
-    skill:["html","css","js"]
-},{
-    name:"mani",
-    skill:["python","sql"]
-},{
-    name:"ravi",
-    skill:["manual testing","java"]
-}]
-student.map((k) => {
-    k.skill.map((v) => {
-        console.log(v);
-    });
-});
+// let student=[{
+//     name:"kavya",
+//     skill:["html","css","js"]
+// },
+// {
+//     name:"mani",
+//     skill:["python","sql"]
+// },
+// {
+//     name:"ravi",
+//     skill:["manual testing","java"]
+// }]
+// student.map((k) => {
+//     k.skill.map((v) => {
+//         console.log(v);
+//     });
+// });
+
+//! example
+let user={
+    student:[
+        {
+            name:"kavya",
+            skill:["html","css","js"]
+        },
+        {
+            name:"mani",
+            skill:["python","n8n","sql"]
+        },{
+            name:"sailaja",
+            skill:["manual testing","java"]
+        }
+    ]
+}
+user.student.map((k)=>{
+    k.skill.map((v)=>
+    {
+        console.log(v)
+    })
+})
