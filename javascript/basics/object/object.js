@@ -137,37 +137,86 @@
 //     console.log(v.mock.tech)
 // })
 //! example 
-let user={
-    student:[
-        {
-            name:"kavya",
-            skill:["html","css","js"],
-            mock:[{
-                tech:1,
-                comm:2
-            }]
-        },
-        {
-            name:"mani",
-            skill:["python","n8n","sql"],
-            mock:[{
-                tech:2,
-                comm:2
-            }]
-        },{
-            name:"sailaja",
-            skill:["manual testing","java"],
-            mock:[{
-                tech:3,
-                comm:2
-            }]
-        }
-    ]
-}
-user.student.map((v)=>{
-    console.log(v)
-     v.mock.map((k)=>{
-        console.log(k)
-        console.log(k.tech)
-     })
-    })
+// let user={
+//     student:[
+//         {
+//             name:"kavya",
+//             skill:["html","css","js"],
+//             mock:[{
+//                 tech:1,
+//                 comm:2
+//             }]
+//         },
+//         {
+//             name:"mani",
+//             skill:["python","n8n","sql"],
+//             mock:[{
+//                 tech:2,
+//                 comm:2
+//             }]
+//         },{
+//             name:"sailaja",
+//             skill:["manual testing","java"],
+//             mock:[{
+//                 tech:3,
+//                 comm:2
+//             }]
+//         }
+//     ]
+// }
+// user.student.map((v)=>{
+//     console.log(v)
+//      v.mock.map((k)=>{
+//         console.log(k)
+//         console.log(k.tech)
+//      })
+//     })
+
+//! object methods
+//! 1) object.keys
+// let emp={
+//     name:"kavya",
+//     age:22,
+//     skill:"html"
+
+// }
+// let empKeys=Object.keys(emp);
+// console.log(empKeys);
+
+//! 2) object.values
+// let emp={
+//     name:"kavya",
+//     age:22,
+//     skill:"html"
+
+// }
+// let empValues=Object.values(emp);
+// console.log(empValues);
+
+//! 3) freeze we can't update, insert, delete a new values or keys 
+// let emp={
+//     name:"kavya",
+//     age:22,
+//     skill:"html"
+// }
+// Object.freeze(emp);
+// emp.age=27;
+// emp.city="hyderabad";
+// delete emp.skill;
+// console.log(emp);
+
+// console.log(Object.isFrozen(emp));   // to check whether it is freeze or not 
+
+//! 4)seal object we can only update the keys and values but not insert and delete 
+// let emp={
+//     name:"kavya",
+//     age:22,
+//     skill:"html"
+// }
+// Object.seal(emp);
+// emp.age=27;
+// emp.city="hyderabad";
+// delete emp.skill;
+// console.log(emp);
+
+// console.log(Object.isSealed(emp));

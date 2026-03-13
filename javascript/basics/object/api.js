@@ -1243,7 +1243,16 @@ let food={
   "skip": 0,
   "limit": 30
 }
-console.log(food.recipes);
-food.recipes.map((v)=>{
-    console.log(v.name);
-})
+//! to get food names 
+// console.log(food.recipes);
+// food.recipes.map((v)=>{
+//     console.log(v.name);
+// })
+//! to get ingredients
+// food.recipes.map((v)=>{
+//     v.ingredients.map((k)=>
+//     {
+//         console.log(k)
+//     })
+// })
+
