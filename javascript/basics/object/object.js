@@ -165,7 +165,9 @@ let user={
     ]
 }
 user.student.map((v)=>{
+    console.log(v)
      v.mock.map((k)=>{
+        console.log(k)
         console.log(k.tech)
      })
     })
