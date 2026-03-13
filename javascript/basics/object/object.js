@@ -220,3 +220,35 @@
 // console.log(emp);
 
 // console.log(Object.isSealed(emp));
+//! 5) object entries
+// let emp={
+//     name:"kavya",
+//     age:22,
+//     skill:"html"
+// }
+// console.log(Object.entries(emp));
+//! hasOwn
+// let emp={
+//     name:"kavya",
+//     age:22,
+//     skill:"html"
+// }
+// console.log(Object.hasOwn(emp,"age"));
+//! hasOwnProperty
+// let emp={
+//     name:"kavya",
+//     age:22,
+//     skill:"html"
+// }
+// console.log(emp.hasOwnProperty("name"));
+//! shallow copy
+let product={
+    brand:"puma",
+    price:4000
+}
+console.log(product,"Original product");
+let productcopy=Object.assign(product)
+console.log(productcopy,"productCopy")
+productcopy.brand="Nike"
+console.log(productcopy,"productCopy")
+console.log(product,"original product after update")
