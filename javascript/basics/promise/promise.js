@@ -43,6 +43,30 @@
 
 //! methods in promise
 // !----------all()--------------------------
+//! ex 1
+// let p1=new Promise((res,rej)=>{
+//     res("I am res p1")
+// })
+// let p2=new Promise((res,rej)=>{
+//     res("I am res p1")
+// })
+// let p3=new Promise((res,rej)=>{
+//     rej("I am rej p1")
+// })
+
+// Promise.all([p1,p2,p3]).then((v)=>{
+//     console.log(v);
+//     console.log("Then block");
+    
+// }).catch((v)=>{
+//     console.log(v);
+//     console.log("Catch block");
+    
+// }).finally(()=>{
+//     console.log("Finally block");
+    
+// })
+//! ex 2
 // let p1=new Promise((res,rej)=>{
 //     res("I am res p1")
 // })
@@ -66,7 +90,10 @@
     
 // })
 
-// !--output="it is giving output in the form of array of result"-!//
+// !--output="it is giving output in the form of array of result"- 
+//  Promise.all()
+// One reject → directly catch
+// No full results!//
 
 // !---allsettled---------------------!///
 // let p1=new Promise((res,rej)=>{
@@ -91,6 +118,8 @@
 //     console.log("Finally block");
     
 // })
+// Promise.all → one fail = catch
+// Promise.allSettled → always then
 
 // !-output--It is giving output in  th form array inside an object is created --it is not possible the execute the catch()----!//
 
@@ -184,26 +213,26 @@
 
 
 // !----------PROMISE Chaining--------------!//
-let p1=new Promise((res,rej)=>{
-    res("i am res p1")
-}).then(()=>{
-    console.log("I am then block");
-    return new Promise((res,rej)=>{
-        rej("i am res in chaining")
-    }).then(()=>{
-        console.log("i am then block in chaining");
+// let p1=new Promise((res,rej)=>{
+//     res("i am res p1")
+// }).then(()=>{
+//     console.log("I am then block");
+//     return new Promise((res,rej)=>{
+//         rej("i am res in chaining")
+//     }).then(()=>{
+//         console.log("i am then block in chaining");
         
-    }).catch(()=>{
-        console.log("I am catch block in chaining");
+//     }).catch(()=>{
+//         console.log("I am catch block in chaining");
         
-    }).finally(()=>{
-        console.log("I am finally block in chaining");
+//     }).finally(()=>{
+//         console.log("I am finally block in chaining");
         
-    })
-}).catch(()=>{
-    console.log("I am catch block.");
+//     })
+// }).catch(()=>{
+//     console.log("I am catch block.");
     
-}).finally(()=>{
-    console.log("I am finally !!!");
+// }).finally(()=>{
+//     console.log("I am finally !!!");
     
-})
+// })
