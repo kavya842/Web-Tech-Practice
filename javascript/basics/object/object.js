@@ -193,7 +193,7 @@
 // let empValues=Object.values(emp);
 // console.log(empValues);
 
-//! 3) freeze we can't update, insert, delete a new values or keys 
+//! 3) freeze we can't update, insert, delete a existing values or keys 
 // let emp={
 //     name:"kavya",
 //     age:22,
@@ -253,28 +253,27 @@
 // console.log(productcopy,"productCopy")
 // console.log(product,"original product after update")
 //! date & time
-let ref=new Date()
-console.log(ref.getDay());
-console.log(ref.getDay());
-console.log(ref.getFullYear())
-console.log(ref.getHours());
-console.log(ref.getMilliseconds());
-console.log(ref.getMinutes())
-console.log(ref.getTimezoneOffset())
-console.log(ref.getTime());
-console.log(ref.toDateString())
-console.log(ref.toLocaleDateString())
-console.log(ref.toLocaleTimeString())
+// let ref=new Date()
+// console.log(ref.getDay());
+// console.log(ref.getDay());
+// console.log(ref.getFullYear())
+// console.log(ref.getHours());
+// console.log(ref.getMilliseconds());
+// console.log(ref.getMinutes())
+// console.log(ref.getTimezoneOffset())
+// console.log(ref.getTime());
+// console.log(ref.toDateString())
+// console.log(ref.toLocaleDateString())
+// console.log(ref.toLocaleTimeString())
 
 //! math--
-let a=Math.PI;
-let b=Math.floor(20.9);
-let a1=Math.round(20.7)
-let a2=Math.min(1,2,3,4,5,6,7)
-let a3=Math.max(1,2,3,4,5,6,7)
-let a6=Math.random()
-let k=Math.floor(Math.random()*10000000)
-let s=Math.sqrt(9)
-let m=Math.cbrt(9)
-let w=Math.pow(2,3)
-
+// let a=Math.PI;
+// let b=Math.floor(20.9);
+// let a1=Math.round(20.7)
+// let a2=Math.min(1,2,3,4,5,6,7)
+// let a3=Math.max(1,2,3,4,5,6,7)
+// let a6=Math.random()
+// let k=Math.floor(Math.random()*10000000)
+// let s=Math.sqrt(9)
+// let m=Math.cbrt(9)
+// let w=Math.pow(2,3)
