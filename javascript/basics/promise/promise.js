@@ -153,6 +153,8 @@
 // !---------any()--------------
 //!Promise.any() is a method that returns the result of the first fulfilled (resolved) promise among multiple promises.
 //!It rejects only when all promises are rejected.
+//!First success vachina promise result matrame return chestundi
+//!Remaining promises ignore chestundi.
 // let p1=new Promise((res,rej)=>{
 //     res("I am res p1")
 // })
@@ -175,10 +177,7 @@
 //     console.log("Finally block");
     
 // })
-
-
-
-
+//!Promise.any returns first resolved promise even if earlier promises are rejected.
 // let p1=new Promise((res,rej)=>{
 //     setTimeout((v)=>{
 //         res("I am res p1")
