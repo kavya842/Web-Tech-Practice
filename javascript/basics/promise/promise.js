@@ -120,10 +120,8 @@
 // })
 // Promise.all → one fail = catch
 // Promise.allSettled → always then
-
-// !-output--It is giving output in  th form array inside an object is created --it is not possible the execute the catch()----!//
-
 // !-------race()-------!//
+//!Promise.race() is a method that returns the result of the first promise that gets settled (either resolved or rejected) among multiple promises.
 // let p1=new Promise((res,rej)=>{
 //     setTimeout((v)=>{
 //         res("I am res p1")
@@ -149,13 +147,12 @@
 //     console.log("Catch block");
     
 // }).finally(()=>{
-//     console.log("Finally block");
-    
+//     console.log("Finally block");   
 // })
 
-// !----it get the result based on the first execution first then it which will executes
-
 // !---------any()--------------
+//!Promise.any() is a method that returns the result of the first fulfilled (resolved) promise among multiple promises.
+//!It rejects only when all promises are rejected.
 // let p1=new Promise((res,rej)=>{
 //     res("I am res p1")
 // })
