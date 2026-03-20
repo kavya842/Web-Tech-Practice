@@ -26,3 +26,10 @@
 //     let randomColorCode=Math.floor(Math.random()*1000000);
 //     document.body.style.backgroundColor=`#${randomColorCode}`;
 // },-1000)
+//! smoothly changing the color
+// setInterval(()=>{
+//     let randomColorCode=Math.floor(Math.random()*1000000);
+//     document.body.style.backgroundColor=`#${randomColorCode}`;
+//     document.body.style.transitionDuration=`2s`
+// },2000)
+//! like the image
