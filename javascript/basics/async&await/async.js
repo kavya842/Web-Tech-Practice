@@ -21,3 +21,21 @@ async function fetchData(){
     document.getElementById("root").innerHTML=output;
 }
 fetchData();
+
+//! try & catch
+async function fetchData(){
+    try{
+    let res=await fetch("https://dummyjson.com/recipes");
+    let val=await res.json();
+    let output="";
+    val.recipes.map((v)=>{
+         output+=`
+         <h1>${v.name}</h1>`;
+    });
+    document.getElementById("root").innerHTML=output;
+} 
+catch(err){
+    console.log(err);
+}
+}
+fetchData();
