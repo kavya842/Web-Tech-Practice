@@ -72,11 +72,11 @@
 // })
 
 //! 2) keyup
-let username=document.getElementById("username");
-username.addEventListener("keyup",function info(e){
-alert(" I am a keyboard Event");
-console.log(e.key);
-})
+// let username=document.getElementById("username");
+// username.addEventListener("keyup",function info(e){
+// alert(" I am a keyboard Event");
+// console.log(e.key);
+// })
 
 //! 3)keydown
 // let username=document.getElementById("username");
@@ -84,3 +84,36 @@ console.log(e.key);
 // alert(" I am a keyboard Event");
 // console.log(e.key);
 // })
+
+//! -------------INPUT/FORM EVENT-----------------------   
+//! 1) input
+// let username=document.getElementById("username")
+// username.addEventListener("input",function data(e){;  // output: k
+//       console.log(e.target.value)                                ka
+// })                                                               kav
+                                                        //          kavy
+                                                        //          kavya
+//! 2)focus
+// let username=document.getElementById("username")
+// username.addEventListener("focus",function data(e){
+//     console.log(e.target.value) 
+// })
+
+//! 3)blur
+// let username=document.getElementById("username")
+// username.addEventListener("blur",function data(e){
+//     console.log(e.target.value) 
+// })
+
+//! 4)change
+// let username=document.getElementById("username")
+// username.addEventListener("change",function data(e){
+//     console.log(e.target.value) 
+// })
+//! 5) submit 6) reset project lo discuss chestam
+
+//! Pointer Event
+function info(e){
+console.log(e)
+console.log("Event is triggered")
+}
