@@ -19,5 +19,9 @@ console.log(location.host,"---host")
 console.log(location.pathname)
 
 function page3rd(){
-    
+    window.location.href="./index3.html"
+}
+
+function forwardPage(){
+    history.forward()
 }
