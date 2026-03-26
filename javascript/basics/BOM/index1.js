@@ -25,3 +25,27 @@ function page3rd(){
 function forwardPage(){
     history.forward()
 }
+//! console
+console.log("Hello everyone")
+console.error("Bye Everyone")
+console.warn("Bye Everyone")
+console.log("hello hii bye!")
+
+let emp={
+    name:"kavya",
+    age:21
+}
+console.table(emp);
+
+//! document
+// document.write(" I am learning html")
+// document.write("in webtech")
+
+// document.writeln("In a learning html")
+// document.writeln("in webtech")
+
+//! screen
+console.log(screen.height);
+console.log(screen.width);
+console.log(screen.availHeight);
+console.log(screen.availWidth);
